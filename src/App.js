@@ -6,9 +6,10 @@ import Resume from "./components/ResumeBuilder/Resume";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<h1>Utills API</h1>} />
+      {/* <Route path="/" element={<h1>Utills API</h1>} /> */}
       <Route path="/random-quote" element={<RandomQuote />} />
-      <Route path="/resume/*" element={<Resume />} />
+      {/* <Route path="/resume/*" element={<Resume />} /> */}
+      <Route path="/" element={<Resume />} />
     </Routes>
   );
 }
