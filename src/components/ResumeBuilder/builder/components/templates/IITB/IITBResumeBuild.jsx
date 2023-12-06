@@ -24,7 +24,7 @@ const ISMResumeBuild = () => {
           {
             name: "Format",
             key: "sections.settings.data.format",
-            label: "IITB Format",
+            label: "Format",
             placeholder: "",
             type: "dropdown",
             options: ["1", "2"],

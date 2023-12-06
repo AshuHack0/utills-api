@@ -12,8 +12,8 @@ const ResumeBuilder = () => {
   const Build = selectedTemplate?.build;
   const Resume = selectedTemplate?.resume;
   const meta = {
-    title: "Resume Builder",
-    description: "Resume Builder - Made for ISM with 🧡 by @leafpetal",
+    title: " MyFuse Resume Builder",
+    description: "Resume Builder",
   };
 
   return (
