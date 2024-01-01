@@ -8,6 +8,7 @@ const ISMResume = ({ sections }) => {
       <Header
         profile={sections.profile.data}
         ism_logo={sections.settings.data.logo}
+        photo={sections.settings.data.photo}
       />
       <div className={styles.left}>
         <Experience experience={sections.experience?.data} />
@@ -27,7 +28,7 @@ const ISMResume = ({ sections }) => {
   );
 };
 
-const Header = ({ profile, ism_logo }) => {
+const Header = ({ profile, photo }) => {
   if (!profile) return null;
   return (
     <div className={styles.header}>
@@ -84,9 +85,9 @@ const Header = ({ profile, ism_logo }) => {
         </div>
       </div>
       <div className={styles.ism_logo}>
-        {ism_logo && (
+        {photo && (
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/b/b0/Indian_Institute_of_Technology_%28Indian_School_of_Mines%29%2C_Dhanbad_Logo.png"
+            src={photo}
             alt="ISM Logo"
           />
         )}

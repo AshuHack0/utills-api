@@ -8,21 +8,28 @@ const ISMResumeBuild = () => {
     direction: "ltr",
     company: "My Fuse",
     sections: [
-      // {
-      //   name: "Settings",
-      //   key: "sections.settings.data",
-      //   type: "static",
-      //   fields: [
-      //     {
-      //       name: "IIT(ISM) logo",
-      //       key: "sections.settings.data.logo",
-      //       label: "IIT(ISM) logo",
-      //       placeholder: "",
-      //       type: "toggle",
-      //       defaultValue: true,
-      //     },
-      //   ],
-      // },
+      {
+        name: "Settings",
+        key: "sections.settings.data",
+        type: "static",
+        fields: [
+          {
+            // name: "IIT(ISM) logo",
+            // key: "sections.settings.data.logo",
+            // label: "IIT(ISM) logo",
+            // placeholder: "",
+            // type: "toggle",
+            // defaultValue: true,
+
+            name: "logo",
+            key: "sections.settings.data.photo",
+            label: "Upload logo",
+            placeholder: "",
+            type: "image",
+            // defaultValue: true,
+          },
+        ],
+      },
       {
         name: "Personal Details",
         key: "sections.profile.data",
