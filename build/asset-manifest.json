@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/utills-api/static/css/main.d1bcdd40.css",
-    "main.js": "/utills-api/static/js/main.809966da.js",
+    "main.css": "/utills-api/static/css/main.cac62ff1.css",
+    "main.js": "/utills-api/static/js/main.bf27fdf7.js",
     "static/media/iitb_resume_preview.png": "/utills-api/static/media/iitb_resume_preview.e6737f6c99f1a90efe80.png",
     "static/media/iitism_resume_preview.png": "/utills-api/static/media/iitism_resume_preview.ff3c3545cbc87036c68d.png",
     "static/media/iitblogo.png": "/utills-api/static/media/iitblogo.60e71223ded4531e60ec.png",
     "index.html": "/utills-api/index.html",
-    "main.d1bcdd40.css.map": "/utills-api/static/css/main.d1bcdd40.css.map",
-    "main.809966da.js.map": "/utills-api/static/js/main.809966da.js.map"
+    "main.cac62ff1.css.map": "/utills-api/static/css/main.cac62ff1.css.map",
+    "main.bf27fdf7.js.map": "/utills-api/static/js/main.bf27fdf7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1bcdd40.css",
-    "static/js/main.809966da.js"
+    "static/css/main.cac62ff1.css",
+    "static/js/main.bf27fdf7.js"
   ]
 }
