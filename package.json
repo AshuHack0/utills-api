@@ -1,6 +1,6 @@
 {
   "name": "utills-api",
-  "homepage": "https://AshuHack0.github.io/utills-api",
+  "homepage": "./public/index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.0",
     "react-scripts": "5.0.1",
+    "vercel": "^33.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
