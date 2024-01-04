@@ -342,7 +342,7 @@ const ResumeProvider = ({ children }) => {
     setLoading(false);
       // eslint-disable-next-line react-hooks/exhaustive-deps
 
-  }, [values, selectedTemplate]);
+  }, [values, selectedTemplate,calculateResumeScore]);
 
   const value = {
     values,
