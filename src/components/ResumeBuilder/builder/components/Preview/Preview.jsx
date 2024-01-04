@@ -43,7 +43,7 @@ const Preview = () => {
 
         });
     }
-  }, [values]);
+  }, [values,getA4Images,printContainerRef]);
 
   return (
     <div className={styles.preview}>
