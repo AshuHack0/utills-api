@@ -39,9 +39,10 @@ const Preview = () => {
           // console.log(img);
           setImage(img); // eslint-disable-next-line react-hooks/exhaustive-deps
           getA4Images();  // eslint-disable-next-line react-hooks/exhaustive-deps
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+             
         });
     }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values]);
 
   return (

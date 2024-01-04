@@ -328,8 +328,7 @@ const ResumeProvider = ({ children }) => {
     if (template) {
       setSelectedTemplate(templates[template]);
     }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-
+            // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -340,9 +339,9 @@ const ResumeProvider = ({ children }) => {
     }
     calculateResumeScore();
     setLoading(false);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-
-  }, [values, selectedTemplate,calculateResumeScore]);
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [values, selectedTemplate]); 
 
   const value = {
     values,
