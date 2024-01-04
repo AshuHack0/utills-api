@@ -3,7 +3,7 @@ import styles from "./Config.module.css";
 import { useResume } from "../../context/Resume";
 import { AiOutlineDelete } from "react-icons/ai";
 // import { FiArrowUp } from "react-icons/fi";
-
+import AI from "./AI";
 const BuildResume = ({ config }) => {
   const { values, get, resumeScore, resumeTip } = useResume();
 
@@ -139,7 +139,7 @@ const DynamicSection = ({
 }) => {
   const { handleResumeChange } = useResume();
   const sectionRefs = useRef([]);
-
+  const ansofai= '';
   useEffect(() => {
     if (!section) return;
     sectionRefs.current = sectionRefs.current.slice(0, section?.length);
@@ -202,6 +202,9 @@ const DynamicSection = ({
                 displayKey={field.displayKey}
               />
             ))}
+            { name=="Experience" ? <AI sectionKey={sectionKey} name={name} index={_index} ansofai={ansofai} />  : '' }
+            { name=="Projects" ? <AI sectionKey={sectionKey} name={name} index={_index} ansofai={ansofai} />  : '' }
+           
           </details>
         ))}
       </div>

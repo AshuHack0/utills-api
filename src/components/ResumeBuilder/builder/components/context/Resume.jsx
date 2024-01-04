@@ -131,6 +131,7 @@ const ResumeProvider = ({ children }) => {
   const [loading, setLoading] = React.useState(false);
   const printContainerRef = React.useRef(null);
 
+  const [ai , setAi] = React.useState(false);
   const calculateResumeScore = () => {
     if (!values) return;
     let score = 0;
@@ -356,6 +357,7 @@ const ResumeProvider = ({ children }) => {
     selectedTemplate,
     handleTemplateChange,
     printContainerRef,
+    setAi
   };
 
   return (
