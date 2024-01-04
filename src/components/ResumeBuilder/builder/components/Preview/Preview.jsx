@@ -39,7 +39,7 @@ const Preview = () => {
           // console.log(img);
           setImage(img);
           getA4Images(); 
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+    
 
         });
     }
