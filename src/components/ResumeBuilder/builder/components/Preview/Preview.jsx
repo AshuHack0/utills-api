@@ -34,16 +34,15 @@ const Preview = () => {
 
   useEffect(() => {
     if (values) {
-      printContainerRef.current &&
-        htmlToCanvasImage(printContainerRef.current).then((img) => {
+      printContainerRef.current &&  // eslint-disable-next-line react-hooks/exhaustive-deps
+        htmlToCanvasImage(printContainerRef.current).then((img) => {  // eslint-disable-next-line react-hooks/exhaustive-deps
           // console.log(img);
-          setImage(img);
-          getA4Images(); 
-    
-
+          setImage(img); // eslint-disable-next-line react-hooks/exhaustive-deps
+          getA4Images();  // eslint-disable-next-line react-hooks/exhaustive-deps
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         });
     }
-  }, [values,getA4Images,printContainerRef]);
+  }, [values]);
 
   return (
     <div className={styles.preview}>
