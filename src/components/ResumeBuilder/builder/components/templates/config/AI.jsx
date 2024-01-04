@@ -3,7 +3,7 @@
   import { useEffect } from 'react';
   import { useResume } from "../../context/Resume";
   const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: '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',
     dangerouslyAllowBrowser: true,
   });
 
