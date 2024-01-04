@@ -38,7 +38,9 @@ const Preview = () => {
         htmlToCanvasImage(printContainerRef.current).then((img) => {
           // console.log(img);
           setImage(img);
-          getA4Images();
+          getA4Images(); 
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+
         });
     }
   }, [values]);
