@@ -13,7 +13,7 @@
     const {setLoading,setAi} = useResume();
     const [result , setResult] = useState();
       const [data, setData] = useState([]);
-
+  console.log("hllow");
     
 
     const accessNestedProperty = (obj, path) => {
