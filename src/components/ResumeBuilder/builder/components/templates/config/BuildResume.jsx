@@ -204,6 +204,7 @@ const DynamicSection = ({
             ))}
             { name=="Experience" ? <AI sectionKey={sectionKey} name={name} index={_index} ansofai={ansofai} />  : '' }
             { name=="Projects" ? <AI sectionKey={sectionKey} name={name} index={_index} ansofai={ansofai} />  : '' }
+            { name=="Technical Skills" ? <AI sectionKey={sectionKey} name={name} index={_index} ansofai={ansofai} />  : '' }
            
           </details>
         ))}
