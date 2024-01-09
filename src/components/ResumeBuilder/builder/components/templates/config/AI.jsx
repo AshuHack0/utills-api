@@ -4,8 +4,8 @@
   import { useResume } from "../../context/Resume";
  
   const openai = new OpenAI({
-    apiKey: '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',
-    dangerouslyAllowBrowser: true,
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    dangerouslyAllowBrowser: true 
   });
 
   const AI = ({name,index,sectionKey,ansofai}) => {
