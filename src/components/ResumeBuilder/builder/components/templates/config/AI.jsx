@@ -4,8 +4,7 @@
   import { useResume } from "../../context/Resume";
    
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-    // dangerouslyAllowBrowser: true,
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY
   });
 
   const AI = ({name,index,sectionKey,ansofai}) => {
@@ -14,7 +13,7 @@
     const {setLoading,setAi} = useResume();
     const [result , setResult] = useState();
       const [data, setData] = useState([]);
-
+  console.log("hllow");
     
 
     const accessNestedProperty = (obj, path) => {
