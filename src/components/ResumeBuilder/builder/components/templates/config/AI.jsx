@@ -2,9 +2,10 @@
   import OpenAI from 'openai';
   import { useEffect } from 'react';
   import { useResume } from "../../context/Resume";
-   
+ 
   const openai = new OpenAI({
-    apiKey: process.env.REACT_APP_OPENAI_API_KEY
+    apiKey: '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',
+    dangerouslyAllowBrowser: true,
   });
 
   const AI = ({name,index,sectionKey,ansofai}) => {
@@ -13,7 +14,7 @@
     const {setLoading,setAi} = useResume();
     const [result , setResult] = useState();
       const [data, setData] = useState([]);
-  console.log("hllow");
+
     
 
     const accessNestedProperty = (obj, path) => {
