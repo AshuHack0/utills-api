@@ -2,9 +2,10 @@
   import OpenAI from 'openai';
   import { useEffect } from 'react';
   import { useResume } from "../../context/Resume";
+   
   const openai = new OpenAI({
-    apiKey: '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',
-    dangerouslyAllowBrowser: true,
+    apiKey: process.env.OPENAI_API_KEY,
+    // dangerouslyAllowBrowser: true,
   });
 
   const AI = ({name,index,sectionKey,ansofai}) => {
