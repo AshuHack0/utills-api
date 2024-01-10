@@ -251,7 +251,7 @@ const Input = ({
     const debounceId = setTimeout(() => {
       clearTimeout(debounceId);
       handleInputChange(e);
-    }, 1000);
+    }, 100);
   };
 
   switch (type) {
