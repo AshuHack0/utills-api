@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import ISMResumeBuild from "../templates/ISM/ISMResumeBuild";
 import ISMResume from "../templates/ISM/ISMResume";
-import ISMPreviewImage from "../../../assets/images/iitism_resume_preview.png";
+import ISMPreviewImage from "../../../assets/images/ashu.png";
 import IITBResumeBuild from "../templates/IITB/IITBResumeBuild";
 import IITBResume from "../templates/IITB/IITBResume";
-import IITBPreviewImage from "../../../assets/images/iitb_resume_preview.png";
+import IITBPreviewImage from "../../../assets/images/ashu2.png";
 
 const ResumeContext = React.createContext();
 
