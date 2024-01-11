@@ -6,8 +6,12 @@
   import 'bootstrap/dist/css/bootstrap.min.css';
   const openai = new OpenAI({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    // apiKey: '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',
     dangerouslyAllowBrowser: true 
   });
+
+
+
 
   const AI = ({name,index,sectionKey,ansofai}) => {
     
@@ -256,7 +260,7 @@
           messages: [
             { role: 'system', content: 'You are a resume maker, and helpfule for providing the data to bulid good resume according to user input ' },
             { role: 'system', content: 'Provide ans' },
-              // { role: 'system', content: 'Provide answers using some metrics in every sentences' },
+              { role: 'system', content: 'Provide answers using some metrics in every sentences' },
             { role: 'system', content: 'Always Provide resoponse in 30 to 40 words' },
            
             // { role: 'user', content: `Give me a short description for ${name} in the company ${ans.company} for the job period ${ans.timePeriod} and role is ${ans.role} in 50 to 80 word , this will be added to the resume experience description`  },
