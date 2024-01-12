@@ -6,7 +6,6 @@
   import 'bootstrap/dist/css/bootstrap.min.css';
   const openai = new OpenAI({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-    // apiKey: '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',
     dangerouslyAllowBrowser: true 
   });
 
