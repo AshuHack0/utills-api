@@ -9,21 +9,26 @@ const Resume = () => {
 
   
   // Your authentication logic goes here
+
+
   const [user, setUser] = useState([]);
 
+
   useEffect(() => {
-    fetch('https://myfuse.in/dashboard/api.php')
-      .then(response => response.json())
-      .then(data => {
-        setUser(data);
-        console.log(data); // Log the data inside the .then block
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+  fetch('https://myfuse.in/dashboard/api.php', {
+  method: 'GET',
+  credentials: 'include',
+  headers: {
+    'Content-Type': 'application/json',
+           },
+        })
+  .then(response => response.json())
+  .then(data => setUser(data))
+  .catch(error => console.error('Error fetching data:', error));
   }, []);
    
-console.log(user)
+  console.log(user.name);
+  
 
   return (
     <ResumeProvider>
