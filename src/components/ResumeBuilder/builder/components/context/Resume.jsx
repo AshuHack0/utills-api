@@ -3,8 +3,12 @@ import ISMResumeBuild from "../templates/ISM/ISMResumeBuild";
 import ISMResume from "../templates/ISM/ISMResume";
 import ISMPreviewImage from "../../../assets/images/ashu.png";
 import IITBResumeBuild from "../templates/IITB/IITBResumeBuild";
+import IITDResumeBuild from "../templates/IITD/IITDResumeBuild";
+
 import IITBResume from "../templates/IITB/IITBResume";
+import IITDResume from "../templates/IITD/IITDResume";
 import IITBPreviewImage from "../../../assets/images/ashu2.png";
+import IITDPreviewImage from "../../../assets/images/IIT.png";
 
 const ResumeContext = React.createContext();
 
@@ -117,6 +121,14 @@ const ResumeProvider = ({ children }) => {
       resume: IITBResume,
       page_margins: "0.5in",
       preview: IITBPreviewImage,
+    },
+    iitd: {
+      name: "Template 3",
+      key: "iitd",
+      build: IITDResumeBuild,
+      resume: IITDResume,
+      page_margins: "0.5in",
+      preview: IITDPreviewImage,
     },
   };
   const [selectedTemplate, setSelectedTemplate] = React.useState(null);
