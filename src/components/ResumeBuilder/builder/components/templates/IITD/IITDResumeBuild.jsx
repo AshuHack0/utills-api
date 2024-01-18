@@ -8,30 +8,30 @@ const IITDResumeBuild = () => {
     direction: "ltr",
     company: "Indian Institute of Technology, Bombay",
     sections: [
-      // {
-      //   name: "Settings",
-      //   key: "sections.settings.data",
-      //   type: "static",
-      //   fields: [
-      //     {
-      //       name: "IITB logo",
-      //       key: "sections.settings.data.logo",
-      //       label: "IITB logo",
-      //       placeholder: "",
-      //       type: "toggle",
-      //       defaultValue: true,
-      //     },
-      //     {
-      //       name: "Format",
-      //       key: "sections.settings.data.format",
-      //       label: "Format",
-      //       placeholder: "",
-      //       type: "dropdown",
-      //       options: ["1", "2"],
-      //       defaultValue: "1",
-      //     },
-      //   ],
-      // },
+      {
+        name: "Settings",
+        key: "sections.settings.data",
+        type: "static",
+        fields: [
+          // {
+          //   name: "IITB logo",
+          //   key: "sections.settings.data.logo",
+          //   label: "IITB logo",
+          //   placeholder: "",
+          //   type: "toggle",
+          //   defaultValue: true,
+          // },
+          {
+            name: "Format",
+            key: "sections.settings.data.format",
+            label: "Format",
+            placeholder: "",
+            type: "dropdown",
+            options: ["1", "2"],
+            defaultValue: "2",
+          },
+        ],
+      },
       {
         name: "Personal Details",
         key: "sections.profile.data",
