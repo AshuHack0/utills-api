@@ -7,7 +7,7 @@ import IITDResumeBuild from "../templates/IITD/IITDResumeBuild";
 
 import IITBResume from "../templates/IITB/IITBResume";
 import IITDResume from "../templates/IITD/IITDResume";
-import IITBPreviewImage from "../../../assets/images/ashu2.png";
+import IITBPreviewImage from "../../../assets/images/temp2.png";
 import IITDPreviewImage from "../../../assets/images/IIT.png";
 
 const ResumeContext = React.createContext();

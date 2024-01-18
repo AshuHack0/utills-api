@@ -133,12 +133,12 @@ const Experience = ({ experience, settings }) => {
         <div className={styles.project} key={index}>
           <div className={styles.firstline}>
             <h3 className={styles.title}>{exp.role}</h3>
-            <i>{exp.timePeriod}</i>
+            <i> {exp.company} ({exp.timePeriod}) </i>
           </div>
 
           <div className={styles.secondline}>
             <i>{exp.description}</i>
-            <i>{exp.company}</i>
+            {/* <i>{exp.company}</i> */}
           </div>
 
           <div
