@@ -28,9 +28,8 @@ const Resume = () => {
   console.log(user.isauth);
   
   if (user.isauth==false) {
-    // Redirect to the external website if not authenticated
     window.location.href = "https://myfuse.in/home";
-    return null; // Return null to avoid rendering anything for the current route
+    return null;  
   }
 
   return (

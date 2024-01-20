@@ -40,13 +40,13 @@ function MyResponsiveNavbar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="https://myfuse.in/home" style={{ color: 'white' }}>
+            <Nav.Link href="https://myfuse.in/login-con/index.php" style={{ color: 'white' }}>
               Home
             </Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title={<span style={{ color: 'white' }}>{user ? user.name : 'Unknown User'}</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="https://myfuse.in/login-con/index.php">Logout</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
