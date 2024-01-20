@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import ResumeShowcase from "./showcase/ResumeShowcase";
 import ResumeBuilder from "./builder/ResumeBuilder";
 import ResumeProvider from "./builder/components/context/Resume";
@@ -12,8 +12,6 @@ const Resume = () => {
 
 
   const [user, setUser] = useState([]);
-
-
   useEffect(() => {
   fetch('https://myfuse.in/dashboard/api.php', {
   method: 'GET',
@@ -27,8 +25,13 @@ const Resume = () => {
   .catch(error => console.error('Error fetching data:', error));
   }, []);
    
-  console.log(user.name);
+  console.log(user.isauth);
   
+  if (user.isauth==false) {
+    // Redirect to the external website if not authenticated
+    window.location.href = "https://myfuse.in/home";
+    return null; // Return null to avoid rendering anything for the current route
+  }
 
   return (
     <ResumeProvider>
@@ -45,11 +48,12 @@ const Resume = () => {
       
         {/* <Route
           path="/showcase"
-          element={authenticated ? <ResumeShowcase /> : <Navigate to="/" />}
+          element={user.isauth ? <ResumeShowcase /> : <Navigate to="https://myfuse.in/home" />}
         />
+        
         <Route
           path="/*"
-          element={authenticated ? <ResumeBuilder /> : <Navigate to="/" />}
+          element={user.isauth ? <ResumeBuilder /> : window.location.href = "https://myfuse.in/home"}
         /> */}
       </Routes>
     </ResumeProvider>

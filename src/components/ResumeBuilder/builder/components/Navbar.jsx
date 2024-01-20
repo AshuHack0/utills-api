@@ -1,8 +1,29 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
 
 function MyResponsiveNavbar() {
+
+  
+
+  const [user, setUser] = useState([]);  
+
+  useEffect(() => {
+    fetch('https://myfuse.in/dashboard/api.php', {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+             },
+          })
+    .then(response => response.json())
+    .then(data => setUser(data))
+    .catch(error => console.error('Error fetching data:', error));
+    }, []);
+     
+    console.log(user.name);
+
   return (
     <Navbar style={{ backgroundColor: '#232D3F' }} expand="lg" variant="dark">
       <Container>
@@ -24,7 +45,7 @@ function MyResponsiveNavbar() {
             </Nav.Link>
           </Nav>
           <Nav>
-            <NavDropdown title={<span style={{ color: 'white' }}>Ashutosh Kumar</span>} id="basic-nav-dropdown">
+            <NavDropdown title={<span style={{ color: 'white' }}>{user ? user.name : 'Unknown User'}</span>} id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Logout</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
