@@ -12,19 +12,52 @@ const Resume = () => {
 
 
   const [user, setUser] = useState([]);
-  useEffect(() => {
-  fetch('https://myfuse.in/dashboard/api.php', {
-  method: 'GET',
-  credentials: 'include',
-  headers: {
-    'Content-Type': 'application/json',
-           },
-        })
-  .then(response => response.json())
-  .then(data => setUser(data))
-  .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  // useEffect(() => {
+  // fetch('https://myfuse.in/dashboard/api.php', {
+  // method: 'GET',
+  // credentials: 'include',
+  // headers: {
+  //   'Content-Type': 'application/json',
+  //          },
+  //       })
+  // .then(response => response.json())
+  // .then(data => setUser(data))
+  // .catch(error => console.error('Error fetching data:', error));
+  // }, []);
    
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://myfuse.in/dashboard/api.php', {
+          method: 'GET',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+  
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+  
+        const data = await response.json();
+        setUser(data);
+  
+        // Code here will only execute after the fetch and setUser are completed
+        console.log('Data fetched successfully:', data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData(); // Call the async function immediately
+  
+    // The dependency array is empty, so this effect runs only once when the component mounts
+  }, []);
+  
+
+
+
   console.log(user.isauth);
   
   if (user.isauth==false) {

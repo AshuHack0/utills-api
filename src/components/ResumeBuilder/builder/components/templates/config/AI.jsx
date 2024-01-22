@@ -128,9 +128,7 @@
         // Add AI response to the conversation
         setConversation(completion.choices[0].message.content);
       // addMessageToConversation('assistant', completion.choices[0].message.content);
-
-      // Clear the input field
-      setInput('');
+ 
         console.log('ai result',ansofai)
        setResult(ansofai)
         console.log(ans);
@@ -179,8 +177,7 @@
         setConversation(completion.choices[0].message.content);
       // addMessageToConversation('assistant', completion.choices[0].message.content);
 
-      // Clear the input field
-      setInput('');
+       
         console.log('ai result',ansofai)
        setResult(ansofai)
         console.log(ans);
@@ -229,8 +226,7 @@
         setConversation(completion.choices[0].message.content);
       // addMessageToConversation('assistant', completion.choices[0].message.content);
 
-      // Clear the input field
-      setInput('');
+      
         console.log('ai result',ansofai)
        setResult(ansofai)
         console.log(ans);
@@ -280,8 +276,7 @@
         setConversation(completion.choices[0].message.content);
       // addMessageToConversation('assistant', completion.choices[0].message.content);
 
-      // Clear the input field
-      setInput('');
+      
         console.log('ai result',ansofai)
        setResult(ansofai)
         console.log(ans);
@@ -331,8 +326,7 @@
         setConversation(completion.choices[0].message.content);
       // addMessageToConversation('assistant', completion.choices[0].message.content);
 
-      // Clear the input field
-      setInput('');
+       
         console.log('ai result',ansofai)
        setResult(ansofai)
         console.log(ans);
@@ -352,6 +346,9 @@
     useEffect(() => {
         setData(JSON.parse(localStorage.getItem("resume")))
     }, []); 
+
+
+    
     return (
       <>
         <div   style={{  padding:'20px'}}> 
@@ -380,7 +377,7 @@
           )}
         </div>
       </div>
-        
+        {console.log(typeof(input))}
         <form  >
           <div className="mb-3">
             <input
