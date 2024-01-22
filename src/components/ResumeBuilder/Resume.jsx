@@ -60,10 +60,10 @@ const Resume = () => {
 
   console.log(user.isauth);
   
-  if (user.isauth==false) {
-    window.location.href = "https://myfuse.in/home";
-    return null;  
-  }
+  // if (user.isauth==false) {
+  //   window.location.href = "https://myfuse.in/home";
+  //   return null;  
+  // }
 
   return (
     <ResumeProvider>
