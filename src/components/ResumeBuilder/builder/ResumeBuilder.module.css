@@ -48,3 +48,173 @@
     overflow-y: auto;
   }
 }
+
+/* ai css start */
+ 
+
+#settingstrigger {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  height: 80px;
+  width: 80px;
+  background: #4B49AC;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+   
+}
+
+ 
+  
+
+ .closeButton{
+  width: 29%;
+  display: flex;
+  justify-content: end;
+  /* border:2px solid black */
+ }
+ .messageDiv {
+  
+  height: 75%;
+  background-color: white;
+  padding: .4rem;
+  overflow: scroll;
+ }
+
+ .sendDiv {
+  height: 12%;
+  margin-top: .4rem;
+  background-color: white ;
+ 
+ }
+
+ @keyframes slideOutToBottom {
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(100%);
+  }
+}
+
+.closingAnimation {
+  animation: slideOutToBottom 0.5s ease-out;
+}
+
+ /* Add these styles to your CSS module */
+
+.trigger {
+  cursor: pointer;
+}
+
+/* Styling for the chat box */
+.chatBot {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 500px;
+  margin: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  animation-duration: 0.5s;
+}
+
+.header {
+  background-color: #4e8cff;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.closeButton img {
+  width: 20px;
+}
+
+.messageDiv {
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.message {
+  background-color: #e1f3ff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+ 
+}
+
+.inputMessage {
+  display: inline-block;
+  text-align: right;
+  background-color: #4e8cff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+ 
+.sendDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+input {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-right: 8px; 
+  overflow:visible;
+}
+input:focus {
+  outline: none;
+}
+.sendButton {
+  background-color: white ;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.sendButton:hover{
+  background-color: #4e8cff;
+
+}
+
+.livedot{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(116, 231, 116);
+  border-radius: 50%;
+  position: absolute;
+  left: .5rem;
+  top: 1rem;
+  animation: blink 1s infinite; /* Blink animation */
+}
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+/* ai css end  */

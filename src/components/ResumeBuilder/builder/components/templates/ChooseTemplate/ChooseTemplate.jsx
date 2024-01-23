@@ -23,9 +23,9 @@ const ChooseTemplate = () => {
             </div>
           );
         })}
-        <div  >
+        {/* <div  >
           <img src={bot} alt="" srcset="" height={'400'} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

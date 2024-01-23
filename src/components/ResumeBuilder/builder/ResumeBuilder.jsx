@@ -7,6 +7,7 @@ import DocumentMeta from "react-document-meta";
 import { useResume } from "./components/context/Resume";
 import ChooseTemplate from "./components/templates/ChooseTemplate/ChooseTemplate";
 import MyResponsiveNavbar from "./components/Navbar"
+import AiAll from "./AiAll";
 const ResumeBuilder = () => {
   const { selectedTemplate, printContainerRef, values } = useResume();
   const Build = selectedTemplate?.build;
@@ -54,7 +55,7 @@ const ResumeBuilder = () => {
             <p style={{fontSize:'12px',marginBottom:'0px'}} >Empowering digital experiences, managed and developed by Ashutosh Kumar</p>
           
           </div>
-    
+         <AiAll/>
     </DocumentMeta>
   );
 };
