@@ -4,11 +4,13 @@ import ISMResume from "../templates/ISM/ISMResume";
 import ISMPreviewImage from "../../../assets/images/ashu.png";
 import IITBResumeBuild from "../templates/IITB/IITBResumeBuild";
 import IITDResumeBuild from "../templates/IITD/IITDResumeBuild";
-
+import IITKResumeBuild from "../templates/IITK/IITKResumeBuild";
 import IITBResume from "../templates/IITB/IITBResume";
 import IITDResume from "../templates/IITD/IITDResume";
+import IITKResume from "../templates/IITK/IITKResume";
 import IITBPreviewImage from "../../../assets/images/temp2.png";
 import IITDPreviewImage from "../../../assets/images/IIT.png";
+import IITKPreviewImage from "../../../assets/images/IITK.png";
 
 const ResumeContext = React.createContext();
 
@@ -129,6 +131,14 @@ const ResumeProvider = ({ children }) => {
       resume: IITDResume,
       page_margins: "0.5in",
       preview: IITDPreviewImage,
+    },
+    iitk: {
+      name: "Template 4",
+      key: "iitk",
+      build: IITKResumeBuild,
+      resume: IITKResume,
+      page_margins: "0.5in",
+      preview: IITKPreviewImage,
     },
   };
   const [selectedTemplate, setSelectedTemplate] = React.useState(null);

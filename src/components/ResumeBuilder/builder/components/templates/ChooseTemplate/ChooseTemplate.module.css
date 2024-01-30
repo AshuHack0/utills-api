@@ -1,5 +1,5 @@
 .container {
-  max-width: 1024px;
+  max-width: 1324px;
   margin: 0 auto;
 min-height: 83dvh;
   padding: 20px;
@@ -26,8 +26,8 @@ min-height: 83dvh;
 
 .templatesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem;
   margin-top: 4rem;
 }
 
