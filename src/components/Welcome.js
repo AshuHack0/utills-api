@@ -6,6 +6,14 @@ import styles from "./Welcome.module.css";
 import template from "./ResumeBuilder/assets/images/ashu.png";
 import { NavLink } from 'react-router-dom';
 import PrevImage from './ResumeBuilder/assets/images/preview.png'
+
+
+function handleClick() {
+    // Remove template data from local storage
+    localStorage.removeItem('template');
+  }
+
+
 const Welcome = () => {
   return (  
     <div >
@@ -25,8 +33,10 @@ const Welcome = () => {
                                 <NavLink to="/welcome">
                                 <button className='btn btn-success me-4' style={{backgroundColor:'rgb(35, 45, 63)' , padding:'.6rem'}}>  Craft My Resume</button>
                                 </NavLink>
-                                <button className='btn  ' style={{border:'2px solid rgb(35, 45, 63) ' , padding:'.6rem'}} > View Samples</button>
 
+                                <NavLink to="/welcome" onClick={handleClick}>
+                                <button className='btn  ' style={{border:'2px solid rgb(35, 45, 63) ' , padding:'.6rem'}} > View Samples</button>
+                                </NavLink>
                              </div>
                          </div>
                      </div>
