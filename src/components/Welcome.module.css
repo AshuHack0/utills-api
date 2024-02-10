@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Protest+Revolution&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+.background{
+    background-image: url(./ResumeBuilder/assets/background.png);
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.templateImage {
+    
+    height: 70vh;
+    border-radius: 24px;
+    box-shadow: 1px 2px 20px rgba(0,0,0,0.1);
+}
+
+.templateBox{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    
+}
+.leftbox{
+    height: 70vh;
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center; 
+    justify-content: center;
+}
+.leftboxinner{
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center; 
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading{
+    /* font-family: 'Mukta', sans-serif; */
+}
+.paragraph {
+    /* font-family: 'Mukta', sans-serif; */
+}
+.section2image {
+    height: 20vw;
+}
+
+.previewImage{
+    height: 80%;
+    width: 90%;
+    border-radius: 8px;
+}

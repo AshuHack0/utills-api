@@ -8,6 +8,7 @@ import { useResume } from "./components/context/Resume";
 import ChooseTemplate from "./components/templates/ChooseTemplate/ChooseTemplate";
 import MyResponsiveNavbar from "./components/Navbar"
 import AiAll from "./AiAll";
+import Footer from "./components/Footer";
 const ResumeBuilder = () => {
   const { selectedTemplate, printContainerRef, values } = useResume();
   const Build = selectedTemplate?.build;
@@ -19,11 +20,9 @@ const ResumeBuilder = () => {
   
   return (
     <DocumentMeta {...meta}> 
-     
     <MyResponsiveNavbar  />
       {/* For only print purposes */} 
       <div className={previewStyles.print_only_resume_page} id="print_content"> 
-    
         <div
           ref={printContainerRef}
           className={previewStyles.container}
@@ -35,10 +34,11 @@ const ResumeBuilder = () => {
           {Resume && <Resume sections={values.sections} />}
         </div>
       </div>
+
+
       {selectedTemplate ? (
         <div className={styles.container}>
           <div className={styles.left}> 
-          
             <Build />
           </div>
           <div className={styles.right}>
@@ -50,11 +50,7 @@ const ResumeBuilder = () => {
 
         <ChooseTemplate />
       )}
-          <div style={{backgroundColor:'#232D3F', color:'white' , textAlign:'center' , padding:'1rem'}}> 
-            <p style={{fontSize:'14px', marginBottom:'0px'}}> Copyright ©2024 MyFuse.In. All Rights Reserved</p>
-            <p style={{fontSize:'12px',marginBottom:'0px'}} >Empowering digital experiences, managed and developed by Ashutosh Kumar</p>
-          
-          </div>
+        <Footer/>
          <AiAll/>
     </DocumentMeta>
   );

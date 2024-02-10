@@ -1,15 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import RandomQuote from "./components/RandomQuotes/RandomQuote";
 import Resume from "./components/ResumeBuilder/Resume";
+import Welcome from "./components/Welcome";
 
 function App() {
+
   return (
     <Routes>
-      {/* <Route path="/" element={<h1>Utills API</h1>} /> */}
-      <Route path="/random-quote" element={<RandomQuote />} />
-      {/* <Route path="/resume/*" element={<Resume />} /> */}
-      <Route path="/" element={<Resume />} />
+      <Route path="/welcome" element={<Resume />} />
+      <Route path="/" element={<Welcome/>} />
     </Routes>
   );
 }

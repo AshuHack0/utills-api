@@ -4,9 +4,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 
 function MyResponsiveNavbar() {
-
-  
-
   const [user, setUser] = useState([]);  
 
   useEffect(() => {
