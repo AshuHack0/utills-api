@@ -9,6 +9,14 @@
     background-size: cover;
 }
 
+.background2{
+    background-image: url(./ResumeBuilder/assets/images/back.png);
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .templateImage {
     
     height: 70vh;
@@ -49,7 +57,7 @@
 }
 
 .previewImage{
-    height: 80%;
+    height: 96%;
     width: 90%;
     border-radius: 8px;
 }
