@@ -1,16 +1,28 @@
 import React, { useEffect } from "react";
+
+
+// Build 
 import ISMResumeBuild from "../templates/ISM/ISMResumeBuild";
-import ISMResume from "../templates/ISM/ISMResume";
-import ISMPreviewImage from "../../../assets/images/ashu.png";
 import IITBResumeBuild from "../templates/IITB/IITBResumeBuild";
 import IITDResumeBuild from "../templates/IITD/IITDResumeBuild";
 import IITKResumeBuild from "../templates/IITK/IITKResumeBuild";
+import IITNResumeBuild from "../templates/IITN/IITNResumeBuild";
+
+
+//Resume
+import ISMResume from "../templates/ISM/ISMResume";
 import IITBResume from "../templates/IITB/IITBResume";
 import IITDResume from "../templates/IITD/IITDResume";
 import IITKResume from "../templates/IITK/IITKResume";
+import IITNResume from "../templates/IITN/IITNResume";
+
+// Preview Image
+import ISMPreviewImage from "../../../assets/images/ashu.png";
 import IITBPreviewImage from "../../../assets/images/temp2.png";
 import IITDPreviewImage from "../../../assets/images/IIT.png";
 import IITKPreviewImage from "../../../assets/images/IITK.png";
+import IITNPreviewImage from "../../../assets/images/IITN.png";
+
 
 const ResumeContext = React.createContext();
 
@@ -139,6 +151,14 @@ const ResumeProvider = ({ children }) => {
       resume: IITKResume,
       page_margins: "0.5in",
       preview: IITKPreviewImage,
+    },
+    iitn: {
+      name: "Template 5",
+      key: "iitn",
+      build: IITNResumeBuild,
+      resume: IITNResume,
+      page_margins: "0.5in",
+      preview: IITNPreviewImage,
     },
   };
   const [selectedTemplate, setSelectedTemplate] = React.useState(null);
