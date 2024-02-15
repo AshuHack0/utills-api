@@ -37,13 +37,9 @@ function App() {
     const fetchUserAndSetUser = async () => {
       try {
         const userData = await getUser();
-        setUser(userData);
-
-             if (!userData.isauth) {
-                   window.location.href = "https://myfuse.in/homepage/login";
-                  return null;  
-                 }
+        setUser(userData);       
       } catch (error) {
+        window.location.href = "https://myfuse.in/homepage/login";
         console.error('Error setting user:', error);
       }
     };
