@@ -5,10 +5,7 @@ import Welcome from "./components/Welcome";
 import { useEffect, useState } from "react";
 
 function App() {
-
-  const [user, setUser] = useState([]);
-
-
+ 
   const fetchData = async () => {
     try {
       const response = await fetch('https://myfuse.in/dashboard/api.php', {
@@ -20,15 +17,13 @@ function App() {
       });
 
       if (!response.ok) {
-             window.location.href = "https://myfuse.in/home";
              throw new Error('Network response was not ok');
       }
 
       const data = await response.json();
-      setUser(data);
-        console.log(data.isauth);
+  
         if (!data.isauth) {
-           window.location.href = "https://myfuse.in/home";
+           window.location.href = "https://myfuse.in/homepage/login";
           return null;  
         }
       console.log('Data fetched successfully:', data);
