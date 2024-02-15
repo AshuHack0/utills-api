@@ -7,41 +7,41 @@ import { useEffect, useState } from "react";
 function App() {
 
   const [user, setUser] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://myfuse.in/dashboard/api.php', {
-          method: 'GET',
-          credentials: 'include',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-  
-        if (!response.ok) {
-               window.location.href = "https://myfuse.in/home";
-               throw new Error('Network response was not ok');
-        }
-  
-        const data = await response.json();
-        setUser(data);
-  
-        console.log('Data fetched successfully:', data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
+
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://myfuse.in/dashboard/api.php', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+             window.location.href = "https://myfuse.in/home";
+             throw new Error('Network response was not ok');
       }
-    };
-  
+
+      const data = await response.json();
+      setUser(data);
+        console.log(data.isauth);
+        if (!data.isauth) {
+           window.location.href = "https://myfuse.in/home";
+          return null;  
+        }
+      console.log('Data fetched successfully:', data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  useEffect(() => {
     fetchData(); 
-   
   }, []);
  
   
-  // if (user.isauth==false) {
-    
-  //   window.location.href = "https://myfuse.in/home";
-  //   return null;  
-  // }
   return (
     <Routes>
       <Route path="/welcome" element={<Resume />} />
