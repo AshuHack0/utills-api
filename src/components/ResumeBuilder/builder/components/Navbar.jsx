@@ -2,38 +2,78 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+
+
+
+const getUser = async () => {
+  try {
+    const response = await axios.get('https://myfuse.in/dashboard/api.php', {
+      withCredentials: true,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.status === 200) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = response.data;
+    console.log('Data fetched successfully:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+};
+
 
 function MyResponsiveNavbar() {
-  const [user, setUser] = useState([]);  
-  
-
-  const getUser = async() =>{
-    try {
-      const response = await fetch('https://myfuse.in/dashboard/api.php', {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (!response.ok) {
-             throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      setUser(data);
-      console.log('Data fetched successfully:', data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    getUser(); 
-    }, []);
+    const fetchUserAndSetUser = async () => {
+      try {
+        const userData = await getUser();
+        setUser(userData);
+      } catch (error) {
+        console.error('Error setting user:', error);
+      }
+    };
+
+    fetchUserAndSetUser();
+  }, []);
+  
+
+  // const getUsers = async() =>{
+  //   try {
+  //     const response = await fetch('https://myfuse.in/dashboard/api.php', {
+  //       method: 'GET',
+  //       credentials: 'include',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+
+  //     if (!response.ok) {
+  //            throw new Error('Network response was not ok');
+  //     }
+  //     const data = await response.json();
+  //     setUser(data);
+  //     console.log('Data fetched successfully:', data);
+  //   } catch (error) {
+  //     console.error('Error fetching data:', error);
+  //   }
+  // }
+
+
+  // useEffect(() => {
+  //   getUser(); 
+  //   }, []);
      
-    // console.log(user.name);
+  //   // console.log(user.name);
 
   return (
     <Navbar style={{ backgroundColor: '#232D3F' }} expand="lg" variant="dark">
