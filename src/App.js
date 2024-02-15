@@ -19,7 +19,8 @@ function App() {
         });
   
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+               window.location.href = "https://myfuse.in/home";
+               throw new Error('Network response was not ok');
         }
   
         const data = await response.json();
@@ -34,13 +35,13 @@ function App() {
     fetchData(); 
    
   }, []);
+ 
   
-  // console.log(user.isauth);
-  
-  if (user.isauth==false) {
-    window.location.href = "https://myfuse.in/home";
-    return null;  
-  }
+  // if (user.isauth==false) {
+    
+  //   window.location.href = "https://myfuse.in/home";
+  //   return null;  
+  // }
   return (
     <Routes>
       <Route path="/welcome" element={<Resume />} />
