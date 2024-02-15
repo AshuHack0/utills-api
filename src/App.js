@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Resume from "./components/ResumeBuilder/Resume";
 import Welcome from "./components/Welcome";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function App() {
  
@@ -19,11 +19,10 @@ function App() {
       if (!response.ok) {
              throw new Error('Network response was not ok');
       }
-
       const data = await response.json();
-  
         if (!data.isauth) {
-           window.location.href = "https://myfuse.in/homepage/login";
+          //  window.location.href = "https://myfuse.in/homepage/login";
+          
           return null;  
         }
       console.log('Data fetched successfully:', data);
@@ -32,11 +31,10 @@ function App() {
     }
   };
 
+
   useEffect(() => {
     fetchData(); 
   }, []);
- 
-  
   return (
     <Routes>
       <Route path="/welcome" element={<Resume />} />
