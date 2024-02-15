@@ -22,7 +22,6 @@ function App() {
       const data = await response.json();
         if (!data.isauth) {
           //  window.location.href = "https://myfuse.in/homepage/login";
-          
           return null;  
         }
       console.log('Data fetched successfully:', data);
