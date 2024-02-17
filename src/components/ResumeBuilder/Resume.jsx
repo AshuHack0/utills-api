@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import ResumeBuilder from "./builder/ResumeBuilder";
 import ResumeProvider from "./builder/components/context/Resume";
 import { Helmet } from "react-helmet";

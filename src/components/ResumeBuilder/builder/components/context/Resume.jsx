@@ -161,6 +161,8 @@ const ResumeProvider = ({ children }) => {
       preview: IITNPreviewImage,
     },
   };
+
+  
   const [selectedTemplate, setSelectedTemplate] = React.useState(null);
   const [values, setValues] = React.useState(
     mergeDataIntoConfig(JSON.parse(localStorage.getItem("resume")))

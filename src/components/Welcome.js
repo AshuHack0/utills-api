@@ -1,272 +1,530 @@
-import React from 'react'
-import MyResponsiveNavbar from './ResumeBuilder/builder/components/Navbar'
-import Footer from './ResumeBuilder/builder/components/Footer'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import MyResponsiveNavbar from "./ResumeBuilder/builder/components/Navbar";
+import Footer from "./ResumeBuilder/builder/components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Welcome.module.css";
 import template from "./ResumeBuilder/assets/images/ashu.png";
-import { NavLink } from 'react-router-dom';
-import PrevImage from './ResumeBuilder/assets/images/preview.png'
-import Accordion from 'react-bootstrap/Accordion';
-import allTemp from './ResumeBuilder/assets/images/allTemplate.png'
+import template2 from "./ResumeBuilder/assets/images/ashu2.png"
+import template3 from "./ResumeBuilder/assets/images/IITN.png"
+import template4 from "./ResumeBuilder/assets/images/IIT.png"
+import { NavLink } from "react-router-dom";
+import PrevImage from "./ResumeBuilder/assets/images/preview.png";
+import Accordion from "react-bootstrap/Accordion";
+import allTemp from "./ResumeBuilder/assets/images/allTemplate.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 function handleClick() {
-    // Remove template data from local storage
-    localStorage.removeItem('template');
-  }
-
-
-const Welcome = () => {
-  return (  
-    <div >
-    <MyResponsiveNavbar/>
-      
-    <div className={`container-fluid  ${styles.background}`} >
-            <div className="row ">
-                <div className="col-md-7"  >
-                     <div className={`container  ${styles.leftbox}`}>
-                         <div className={`row ${styles.leftboxinner}`} >
-                             <div className={`col-md-10 `}  >
-                                    <h6 className={styles.paragraph}>Craft a standout resume effortlessly with AI assistance from MyFuse.</h6> 
-                                    <h1 className={styles.heading}>Elevate your career <br/> with our AI resume builder</h1>
-                                    <p className={styles.paragraph}>Craft a polished resume swiftly using our AI-powered platform and customizable templates. Impress potential employers with a professionally designed document that highlights your skills and experiences effectively. With our user-friendly interface, creating a standout resume has never been easier or quicker.</p>
-                             </div>
-                             <div className='col-md-10'>
-                                <NavLink to="/welcome">
-                                <button className='btn btn-success me-4' style={{backgroundColor:'rgb(35, 45, 63)' , padding:'.6rem'}}>  Craft My Resume</button>
-                                </NavLink>
-
-                                <NavLink to="/welcome" onClick={handleClick}>
-                                <button className='btn  ' style={{border:'2px solid rgb(35, 45, 63) ' , padding:'.6rem'}} > View Samples</button>
-                                </NavLink>
-                             </div>
-                         </div>
-                     </div>
-                </div>
-                <div className={`col-md-5 ${styles.templateBox}`}  >
-                      <img src={template} className={`img-fluid ${styles.templateImage}`} />
-               </div>
-            </div>
-        </div>
-
-        <div className={`container-fluid   `} >
-            <div className="row ">
-            <div className={`col-md-6  d-flex justify-content-center align-items-center`}  >
-                      <img src="https://aicw.iamleehom.com/assets/assets.97b477b5.gif" className={`img-fluid `} />
-               </div>
-                <div className="col-md-5"  >
-                <div className={`container  ${styles.leftbox}`}>
-                         <div className={`row ${styles.leftboxinner}`} >
-                             <div className={`col-md-10 `}  >
-                                    <h6 className={styles.paragraph}>AI Resume Builder</h6> 
-                                    <h1 className={styles.heading}>AI Writes Your Resume. <br/> Let Technology Take the Lead</h1>
-                                    <p className={styles.paragraph}> Revolutionize your job hunt with our curated resume and cover letter templates. Featuring 40+ ATS-friendly designs crafted by HR experts and typographers, each template is fully customizable. Explore endless design combinations to create standout applications that captivate employers, fast-tracking your path to securing your ideal position. </p>
-                             </div>
-                             <div className='col-md-10'>
-                                <NavLink to="/">
-                                <button className='btn btn-success me-4' style={{backgroundColor:'rgb(35, 45, 63)' , padding:'.7rem'}}>  Craft My Resume</button>
-                                </NavLink>
-                                 
-                             </div>
-                         </div>
-                     </div>
-                </div>
-               
-            </div>
-        </div>
-    
-
-        <div className={`container-fluid  mt-4 mb-4`} >
-            <div className="row ">
-                <div className="col-md-5"  >
-                     <div className={`container   `}>
-                         <div className={`row ${styles.leftboxinner}`} >
-                             <div className={`col-md-10 `}  >
-                                    <h6 className={styles.paragraph}>Resume Templates</h6> 
-                                    <h1 className={styles.heading}>Select a template and personalize    your resume </h1>
-                                    <p className={styles.paragraph}>Accelerate your job search with visually striking resumes and cover letters. Discover our collection of 40+ ATS-friendly templates, expertly crafted by HR professionals and typographers. Customize every aspect to suit your style and preferences, unleashing over a million unique design combinations. Stand out and land your dream job faster.</p>
-                             </div>
-                             <div className='col-md-10'>
-                                <NavLink to="/welcome">
-                                <button className='btn btn-success me-4' style={{backgroundColor:'rgb(35, 45, 63)' , padding:'.6rem'}}>  Craft My Resume</button>
-                                </NavLink>
-                                
-                             </div>
-                         </div>
-                     </div>
-                </div>
-                <div className={`col-md-7  `}  style={{display:'flex' , justifyContent:'center' , alignItems:'center'}} >
-                      <img src={PrevImage} className={`img-fluid ${styles.previewImage} `} />
-               </div>
-            </div>
-        </div>
-
-        <div className={`container-fluid   `} >
-            <div className="row ">
-            <div className={`col-md-6  d-flex  justify-content-center align-items-center `}  >
-                      <img src={allTemp} className={`img-fluid `} />
-               </div>
-                <div className="col-md-5"  >
-                <div className={`container  ${styles.leftbox}`}>
-                         <div className={`row ${styles.leftboxinner}`} >
-                             <div className={`col-md-10 `}  >
-                                    <h6 className={styles.paragraph}>Resume Examples</h6> 
-                                    <h1 className={styles.heading}>Inspiration from Real Resume Examples</h1>
-                                    <p className={styles.paragraph}>   
-Explore our collection of real resume examples to gain inspiration and insight into effective resume writing. Our curated selection covers various industries, job positions, and levels of experience, providing you with valuable ideas and strategies to craft your own standout resume. Whether you're just starting your career or seeking to advance to the next level, these real-life examples can help you tailor your resume to showcase your skills, accomplishments, and qualifications effectively.</p>
-
-                             </div>
-                             <div className='col-md-10'>
-                                <NavLink to="/">
-                                <button className='btn btn-success me-4' style={{backgroundColor:'rgb(35, 45, 63)' , padding:'.7rem'}}>  Craft My Resume</button>
-                                </NavLink>
-                                 
-                             </div>
-                         </div>
-                     </div>
-                </div>
-               
-            </div>
-        </div>
-
-        <div className={`container-fluid   mb-4   `} >
-            <div className="row d-flex justify-content-center ">
-                <div className="col-md-8 col-10 mt-4"  >
-                    
-                            
-                                     
-                                    <h1 style={{textAlign:'center'}}>Your frequently asked questions.</h1>
-                                   
-                                    <Accordion defaultActiveKey="0" className='mt-4'>
-                                        <Accordion.Item eventKey="0">
-                                            <Accordion.Header> Why is MyFuse the best resume builder online?</Accordion.Header>
-                                            <Accordion.Body>
-                                            <p>Because it offers a comprehensive set of features and benefits designed to make the job search journey easier and more effective. Here's how:</p>
-
-                                                <h6>Professionally-Designed Templates</h6>
-                                                <p>MyFuse’s online resume builder offers a wide range of professionally-designed resume templates and cover letter templates with features and elements that let you customize them however you like.</p>
-
-                                                <h6>Autopilot Feature</h6>
-                                                <p>MyFuse Autopilot allows you to assemble your resume from more than 20,000 pre-written phrases for more than 3,200 positions. This helps you find the right words right from the start and write your resume quickly.</p>
-
-                                                <h6>AI Resume Writer</h6>
-                                                <p>The AI resume writer generates a relevant work experience section for a specific job title, making the resume writing process more efficient and effective.</p>
-
-                                                <h6>AI Cover Letter Writer</h6>
-                                                <p>The AI cover letter writer can generate role-specific cover letters that look and feel like cover letters written by real people, enhancing your chances of making a positive impression on potential employers.</p>
-
-                                                <h6>AI Resume Checker</h6>
-                                                <p>The AI resume checker analyzes your resume to find out what needs to be improved, ensuring that your resume is optimized for applicant tracking systems (ATS) and human recruiters alike.</p>
-
-                                                <h6>LinkedIn Data Import</h6>
-                                                <p>The LinkedIn data import option makes it easy to create a resume in a few clicks, saving you the hassle of starting from scratch and ensuring accuracy and consistency across platforms.</p>
-
-                                                <h6>Resume and Cover Letter Samples</h6>
-                                                <p>MyFuse provides resume and cover letter samples that you can use to create your first draft or get inspired. The database holds over 1,500 job-specific resumes belonging to real people.</p>
-                                                
-                                                <p>If you’re not convinced yet, we encourage you to explore other resume builders and compare their features and benefits. See how MyFuse stands out in terms of functionality, design, and user satisfaction.</p>
-
-
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header>Guide to Creating Your Resume with MyFuse</Accordion.Header>
-                                            <Accordion.Body>
-                                            <p>If you don’t know where to begin, don’t worry. MyFuse will guide you through every stage of writing your resume, one section at a time.</p>
-
-                                                <h6>Getting Started</h6>
-                                                <ol>
-                                                    <li>Sign up or log in to your MyFuse account.</li>
-                                                    <li>When logged in, on the dashboard scroll down to Your Documents and click on Create New.</li>
-                                                </ol>
-
-                                                <h6>Choose Your Approach</h6>
-                                                <p>Next, you can choose among:</p>
-                                                <ul>
-                                                    <li>Creating a brand new resume using the template and customization options of your choice.</li>
-                                                    <li>Importing your existing data from LinkedIn and choosing your preferred design.</li>
-                                                    <li>Using one of 1,500+ existing resume samples and tweaking the details to match yours.</li>
-                                                </ul>
-
-                                                <h6>Adding Content</h6>
-                                                <p>Finally, you add resume sections and populate each one with relevant content. You can also assemble the first draft of your resume just by clicking or using AI:</p>
-                                                <ol>
-                                                    <li>We’ve got more than 20,000 pre-written phrases for more than 3,200 jobs. Simply start editing your resume, click “Add Phrases”, look up your job title, and watch your resume write itself.</li>
-                                                    <li>AI resume writer will generate a relevant work experience section for a specific job title. You can then edit it and tweak the details to make it more you.</li>
-                                                </ol>
-
-                                                <p>If you're not sure about how to write the individual sections of your resume, you can visit our Help Center, read the ultimate resume guide, or click the chameleon icon inside the app.</p>
-
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-
-                                        <Accordion.Item eventKey="2">
-                                            <Accordion.Header>How to Make Your Resume Stand Out with MyFuse?</Accordion.Header>
-                                            <Accordion.Body>
-                                            <h6>Design:</h6>
-                                                    <ol>
-                                                        <li>Choose a visually appealing yet professional template that fits your industry and profession.</li>
-                                                        <li>Ensure that the design is ATS-friendly to increase the chances of passing through applicant tracking systems.</li>
-                                                    </ol>
-
-                                                    <h6>Content:</h6>
-                                                    <ol>
-                                                        <li>Use MyFuse's features to assemble the first draft of your resume effortlessly:</li>
-                                                        <ul>
-                                                            <li>Access over 20,000 pre-written phrases tailored for more than 3,200 job titles. Simply click "Add Phrases", look up your job title, and select relevant phrases to include in your resume.</li>
-                                                            <li>Select from a library of 1,500+ job-specific resume samples and customize the information to reflect your unique skills and experiences.</li>
-                                                            <li>Utilize MyFuse's AI resume writer, which generates a relevant work experience section based on a specific job title, streamlining the resume writing process.</li>
-                                                        </ul>
-                                                    </ol>
-
-                                                    <p>By leveraging MyFuse's design options and content creation features, you can create a standout resume that effectively showcases your strengths and maximizes your chances of securing interviews.</p>
-
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-
-
-                                        <Accordion.Item eventKey="3">
-                                            <Accordion.Header>How does the AI Resume Writer work?</Accordion.Header>
-                                            <Accordion.Body>
-                                            <p>MyFuse’s AI Resume Writer is able to generate a work experience section based on a provided job title.</p>
-
-                                                <p>All you have to do is:</p>
-
-                                                <ol>
-                                                    <li>Sign up or log in to your MyFuse account. When logged in, on the dashboard scroll down to Your Documents and click on Create New.</li>
-                                                    <li>When filling in the Work Experience section, enter your job title, click “Use AI Writer” and the AI will generate a number of bullet points for your work experience subsection.</li>
-                                                    <li>If you don't like these bullet points, you can either edit them or delete them and click the button again.</li>
-                                                    <li>If you like the bullet points but feel like that section is still too short, simply click the button again and the AI will add more phrases to it.</li>
-                                                </ol>
-
-                                                <p>Our AI Resume Builder is easy to use, generates unique resumes every time, and uses natural language indistinguishable from resumes written by human writers.</p>
-
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-
-                                        <Accordion.Item eventKey="4">
-                                            <Accordion.Header>What is the best AI Resume Builder?</Accordion.Header>
-                                            <Accordion.Body>
-                                            <p>Definitely MyFuse's AI Resume Builder. Here are the reasons why:</p>
-
-                                                <ul>
-                                                    <li>MyFuse AI Resume Builder is based on OpenAI’s GPT-3 neural network, which is the world's most powerful natural language processing model.</li>
-                                                    <li>The texts produced by this language model are indistinguishable from texts written by human writers.</li>
-                                                    <li>Each resume that is produced by our AI Resume Builder is unique and custom-built for you.</li>
-                                                </ul>
-
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-
-                                        </Accordion>
-             
-                </div>
-                
-            </div>
-        </div>
-
-    <Footer/>
-    </div>
-     
-  )
+  localStorage.removeItem("template");
 }
 
-export default Welcome
+const Welcome = () => {
+  return (
+    <div>
+      <MyResponsiveNavbar />
+      <div className={`container-fluid  ${styles.background}`}>
+        <div className="row  " style={{display:'flex'}}>
+          <div className="col-md-7 " style={{marginTop:'2rem' , marginBottom:'2rem'}}>
+            <div className={`container  ${styles.leftbox}`}>
+              <div className={`row ${styles.leftboxinner}`}>
+                <div className={`col-md-10 `}>
+                  <h6 className={styles.paragraph}>
+                    Craft a standout resume effortlessly with AI assistance from
+                    MyFuse.
+                  </h6>
+                  <h1 className={styles.heading}>
+                    Elevate your career <br /> with our AI resume builder
+                  </h1>
+                  <p className={styles.paragraph}>
+                    Craft a polished resume swiftly using our AI-powered
+                    platform and customizable templates. Impress potential
+                    employers with a professionally designed document that
+                    highlights your skills and experiences effectively. With our
+                    user-friendly interface, creating a standout resume has
+                    never been easier or quicker.
+                  </p>
+                </div>
+                <div className="col-md-10">
+                  <NavLink to="/welcome">
+                    <button
+                      className="btn btn-success me-4"
+                      style={{
+                        backgroundColor: "rgb(35, 45, 63)",
+                        padding: ".6rem",
+                      }}
+                    >
+                      {" "}
+                      Craft My Resume
+                    </button>
+                  </NavLink>
+
+                  <NavLink to="/welcome" onClick={handleClick}>
+                    <button
+                      className="btn  "
+                      style={{
+                        border: "2px solid rgb(35, 45, 63) ",
+                        padding: ".6rem",
+                      }}
+                    >
+                      {" "}
+                      View Samples
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={`col-md-5   ${styles.templateBox}`} >
+          <Carousel showThumbs={false} autoPlay={true} interval={3000} infiniteLoop={true} showStatus={false}>
+                <div>
+                <img src={template} className={`img-fluid ${styles.templateImage}`} alt="" />
+                    
+                </div>
+                <div>
+                    <img src={template2} className={`img-fluid ${styles.templateImage}`} alt="" />
+                     
+                </div>
+                <div>
+                <img src={template4} className={`img-fluid ${styles.templateImage}`}  alt=""/>
+                   
+                </div>
+                <div>
+                <img src={template3} className={`img-fluid ${styles.templateImage}`} alt="" />
+                   
+                </div>
+            </Carousel>
+            {/* <img
+              src={template}
+              className={`img-fluid ${styles.templateImage}`}
+            /> */}
+          </div>
+        </div>
+      </div>
+
+      <div className={`container-fluid   `}>
+        <div className="row ">
+          <div
+            className={`col-md-6  d-flex justify-content-center align-items-center`}
+          >
+            <img
+              src="https://aicw.iamleehom.com/assets/assets.97b477b5.gif"
+              className={`img-fluid `} alt=""
+            />
+          </div>
+          <div className="col-md-5">
+            <div className={`container  ${styles.leftbox}`}>
+              <div className={`row ${styles.leftboxinner}`}>
+                <div className={`col-md-10 `}>
+                  <h6 className={styles.paragraph}>AI Resume Builder</h6>
+                  <h1 className={styles.heading}>
+                    AI Writes Your Resume. <br /> Let Technology Take the Lead
+                  </h1>
+                  <p className={styles.paragraph}>
+                    {" "}
+                    Revolutionize your job hunt with our curated resume and
+                    cover letter templates. Featuring 40+ ATS-friendly designs
+                    crafted by HR experts and typographers, each template is
+                    fully customizable. Explore endless design combinations to
+                    create standout applications that captivate employers,
+                    fast-tracking your path to securing your ideal position.{" "}
+                  </p>
+                </div>
+                <div className="col-md-10">
+                  <NavLink to="/">
+                    <button
+                      className="btn btn-success me-4"
+                      style={{
+                        backgroundColor: "rgb(35, 45, 63)",
+                        padding: ".7rem",
+                      }}
+                    >
+                      {" "}
+                      Craft My Resume
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`container-fluid  mt-4 mb-4`}>
+        <div className="row ">
+          <div className="col-md-5">
+            <div className={`container   `}>
+              <div className={`row ${styles.leftboxinner}`}>
+                <div className={`col-md-10 `}>
+                  <h6 className={styles.paragraph}>Resume Templates</h6>
+                  <h1 className={styles.heading}>
+                    Select a template and personalize your resume{" "}
+                  </h1>
+                  <p className={styles.paragraph}>
+                    Accelerate your job search with visually striking resumes
+                    and cover letters. Discover our collection of 40+
+                    ATS-friendly templates, expertly crafted by HR professionals
+                    and typographers. Customize every aspect to suit your style
+                    and preferences, unleashing over a million unique design
+                    combinations. Stand out and land your dream job faster.
+                  </p>
+                </div>
+                <div className="col-md-10">
+                  <NavLink to="/welcome">
+                    <button
+                      className="btn btn-success me-4"
+                      style={{
+                        backgroundColor: "rgb(35, 45, 63)",
+                        padding: ".6rem",
+                      }}
+                    >
+                      {" "}
+                      Craft My Resume
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`col-md-7  `}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={PrevImage}
+              className={`img-fluid ${styles.previewImage} `}  alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className={`container-fluid   `}>
+        <div className="row ">
+          <div
+            className={`col-md-6  d-flex  justify-content-center align-items-center `}
+          >
+            <img src={allTemp} className={`img-fluid `} alt="" />
+          </div>
+          <div className="col-md-5">
+            <div className={`container  ${styles.leftbox}`}>
+              <div className={`row ${styles.leftboxinner}`}>
+                <div className={`col-md-10 `}>
+                  <h6 className={styles.paragraph}>Resume Examples</h6>
+                  <h1 className={styles.heading}>
+                    Inspiration from Real Resume Examples
+                  </h1>
+                  <p className={styles.paragraph}>
+                    Explore our collection of real resume examples to gain
+                    inspiration and insight into effective resume writing. Our
+                    curated selection covers various industries, job positions,
+                    and levels of experience, providing you with valuable ideas
+                    and strategies to craft your own standout resume. Whether
+                    you're just starting your career or seeking to advance to
+                    the next level, these real-life examples can help you tailor
+                    your resume to showcase your skills, accomplishments, and
+                    qualifications effectively.
+                  </p>
+                </div>
+                <div className="col-md-10">
+                  <NavLink to="/">
+                    <button
+                      className="btn btn-success me-4"
+                      style={{
+                        backgroundColor: "rgb(35, 45, 63)",
+                        padding: ".7rem",
+                      }}
+                    >
+                      {" "}
+                      Craft My Resume
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`container-fluid   mb-4   `}>
+        <div className="row d-flex justify-content-center ">
+          <div className="col-md-8 col-12 mt-4">
+            <h1 style={{ textAlign: "center" }}>
+              Your frequently asked questions.
+            </h1>
+            <Accordion defaultActiveKey="0" className="mt-4">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>
+                  {" "}
+                  Why is MyFuse the best resume builder online?
+                </Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                    Because it offers a comprehensive set of features and
+                    benefits designed to make the job search journey easier and
+                    more effective. Here's how:
+                  </p>
+
+                  <h6>Professionally-Designed Templates</h6>
+                  <p>
+                    MyFuse’s online resume builder offers a wide range of
+                    professionally-designed resume templates and cover letter
+                    templates with features and elements that let you customize
+                    them however you like.
+                  </p>
+
+                  <h6>Autopilot Feature</h6>
+                  <p>
+                    MyFuse Autopilot allows you to assemble your resume from
+                    more than 20,000 pre-written phrases for more than 3,200
+                    positions. This helps you find the right words right from
+                    the start and write your resume quickly.
+                  </p>
+
+                  <h6>AI Resume Writer</h6>
+                  <p>
+                    The AI resume writer generates a relevant work experience
+                    section for a specific job title, making the resume writing
+                    process more efficient and effective.
+                  </p>
+
+                  <h6>AI Cover Letter Writer</h6>
+                  <p>
+                    The AI cover letter writer can generate role-specific cover
+                    letters that look and feel like cover letters written by
+                    real people, enhancing your chances of making a positive
+                    impression on potential employers.
+                  </p>
+
+                  <h6>AI Resume Checker</h6>
+                  <p>
+                    The AI resume checker analyzes your resume to find out what
+                    needs to be improved, ensuring that your resume is optimized
+                    for applicant tracking systems (ATS) and human recruiters
+                    alike.
+                  </p>
+
+                  <h6>LinkedIn Data Import</h6>
+                  <p>
+                    The LinkedIn data import option makes it easy to create a
+                    resume in a few clicks, saving you the hassle of starting
+                    from scratch and ensuring accuracy and consistency across
+                    platforms.
+                  </p>
+
+                  <h6>Resume and Cover Letter Samples</h6>
+                  <p>
+                    MyFuse provides resume and cover letter samples that you can
+                    use to create your first draft or get inspired. The database
+                    holds over 1,500 job-specific resumes belonging to real
+                    people.
+                  </p>
+
+                  <p>
+                    If you’re not convinced yet, we encourage you to explore
+                    other resume builders and compare their features and
+                    benefits. See how MyFuse stands out in terms of
+                    functionality, design, and user satisfaction.
+                  </p>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>
+                  Guide to Creating Your Resume with MyFuse
+                </Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                    If you don’t know where to begin, don’t worry. MyFuse will
+                    guide you through every stage of writing your resume, one
+                    section at a time.
+                  </p>
+
+                  <h6>Getting Started</h6>
+                  <ol>
+                    <li>Sign up or log in to your MyFuse account.</li>
+                    <li>
+                      When logged in, on the dashboard scroll down to Your
+                      Documents and click on Create New.
+                    </li>
+                  </ol>
+
+                  <h6>Choose Your Approach</h6>
+                  <p>Next, you can choose among:</p>
+                  <ul>
+                    <li>
+                      Creating a brand new resume using the template and
+                      customization options of your choice.
+                    </li>
+                    <li>
+                      Importing your existing data from LinkedIn and choosing
+                      your preferred design.
+                    </li>
+                    <li>
+                      Using one of 1,500+ existing resume samples and tweaking
+                      the details to match yours.
+                    </li>
+                  </ul>
+
+                  <h6>Adding Content</h6>
+                  <p>
+                    Finally, you add resume sections and populate each one with
+                    relevant content. You can also assemble the first draft of
+                    your resume just by clicking or using AI:
+                  </p>
+                  <ol>
+                    <li>
+                      We’ve got more than 20,000 pre-written phrases for more
+                      than 3,200 jobs. Simply start editing your resume, click
+                      “Add Phrases”, look up your job title, and watch your
+                      resume write itself.
+                    </li>
+                    <li>
+                      AI resume writer will generate a relevant work experience
+                      section for a specific job title. You can then edit it and
+                      tweak the details to make it more you.
+                    </li>
+                  </ol>
+
+                  <p>
+                    If you're not sure about how to write the individual
+                    sections of your resume, you can visit our Help Center, read
+                    the ultimate resume guide, or click the chameleon icon
+                    inside the app.
+                  </p>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>
+                  How to Make Your Resume Stand Out with MyFuse?
+                </Accordion.Header>
+                <Accordion.Body>
+                  <h6>Design:</h6>
+                  <ol>
+                    <li>
+                      Choose a visually appealing yet professional template that
+                      fits your industry and profession.
+                    </li>
+                    <li>
+                      Ensure that the design is ATS-friendly to increase the
+                      chances of passing through applicant tracking systems.
+                    </li>
+                  </ol>
+
+                  <h6>Content:</h6>
+                  <ol>
+                    <li>
+                      Use MyFuse's features to assemble the first draft of your
+                      resume effortlessly:
+                    </li>
+                    <ul>
+                      <li>
+                        Access over 20,000 pre-written phrases tailored for more
+                        than 3,200 job titles. Simply click "Add Phrases", look
+                        up your job title, and select relevant phrases to
+                        include in your resume.
+                      </li>
+                      <li>
+                        Select from a library of 1,500+ job-specific resume
+                        samples and customize the information to reflect your
+                        unique skills and experiences.
+                      </li>
+                      <li>
+                        Utilize MyFuse's AI resume writer, which generates a
+                        relevant work experience section based on a specific job
+                        title, streamlining the resume writing process.
+                      </li>
+                    </ul>
+                  </ol>
+
+                  <p>
+                    By leveraging MyFuse's design options and content creation
+                    features, you can create a standout resume that effectively
+                    showcases your strengths and maximizes your chances of
+                    securing interviews.
+                  </p>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="3">
+                <Accordion.Header>
+                  How does the AI Resume Writer work?
+                </Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                    MyFuse’s AI Resume Writer is able to generate a work
+                    experience section based on a provided job title.
+                  </p>
+
+                  <p>All you have to do is:</p>
+
+                  <ol>
+                    <li>
+                      Sign up or log in to your MyFuse account. When logged in,
+                      on the dashboard scroll down to Your Documents and click
+                      on Create New.
+                    </li>
+                    <li>
+                      When filling in the Work Experience section, enter your
+                      job title, click “Use AI Writer” and the AI will generate
+                      a number of bullet points for your work experience
+                      subsection.
+                    </li>
+                    <li>
+                      If you don't like these bullet points, you can either edit
+                      them or delete them and click the button again.
+                    </li>
+                    <li>
+                      If you like the bullet points but feel like that section
+                      is still too short, simply click the button again and the
+                      AI will add more phrases to it.
+                    </li>
+                  </ol>
+
+                  <p>
+                    Our AI Resume Builder is easy to use, generates unique
+                    resumes every time, and uses natural language
+                    indistinguishable from resumes written by human writers.
+                  </p>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="4">
+                <Accordion.Header>
+                  What is the best AI Resume Builder?
+                </Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                    Definitely MyFuse's AI Resume Builder. Here are the reasons
+                    why:
+                  </p>
+
+                  <ul>
+                    <li>
+                      MyFuse AI Resume Builder is based on OpenAI’s GPT-3 neural
+                      network, which is the world's most powerful natural
+                      language processing model.
+                    </li>
+                    <li>
+                      The texts produced by this language model are
+                      indistinguishable from texts written by human writers.
+                    </li>
+                    <li>
+                      Each resume that is produced by our AI Resume Builder is
+                      unique and custom-built for you.
+                    </li>
+                  </ul>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Welcome;

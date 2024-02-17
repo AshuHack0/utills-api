@@ -20,7 +20,7 @@
   grid-area: right;
   background-color: hsl(222, 13%, 45%);
   color: #fff;
-  height: 100dvh;
+  height: 100vh;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

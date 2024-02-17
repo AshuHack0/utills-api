@@ -69,3 +69,10 @@ min-height: 83dvh;
 .template:hover .name {
   color: hsl(207, 88%, 52%);
 }
+.active{
+  color: hsl(207, 88%, 52%);
+}
+
+.activeOnHover:hover {
+  color:rgb(231, 108, 108)
+}

@@ -70,6 +70,12 @@ function MyResponsiveNavbar() {
             </Nav.Link>
           </Nav>
           <Nav>
+          {/* <Nav.Link href="https://myfuse.in/login-con/index.php" style={{ color: 'white' }}>
+              Login
+            </Nav.Link>
+            <Nav.Link href="https://myfuse.in/login-con/index.php" style={{ color: 'white' }}>
+              Create Account
+            </Nav.Link> */}
             <NavDropdown title={<span style={{ color: 'white' }}>{user ? user.name : 'Unknown User'}</span>} id="basic-nav-dropdown">
               <NavDropdown.Item href="https://myfuse.in/login-con/index.php">Logout</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
