@@ -39,7 +39,7 @@ function App() {
         const userData = await getUser();
         setUser(userData);       
       } catch (error) {
-        window.location.href = "https://myfuse.in/homepage/login";
+        // window.location.href = "https://myfuse.in/homepage/login";
         console.error('Error setting user:', error);
       }
     };

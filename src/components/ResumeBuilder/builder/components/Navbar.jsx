@@ -47,33 +47,7 @@ function MyResponsiveNavbar() {
   }, []);
   
 
-  // const getUsers = async() =>{
-  //   try {
-  //     const response = await fetch('https://myfuse.in/dashboard/api.php', {
-  //       method: 'GET',
-  //       credentials: 'include',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //     });
-
-  //     if (!response.ok) {
-  //            throw new Error('Network response was not ok');
-  //     }
-  //     const data = await response.json();
-  //     setUser(data);
-  //     console.log('Data fetched successfully:', data);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // }
-
-
-  // useEffect(() => {
-  //   getUser(); 
-  //   }, []);
-     
-  //   // console.log(user.name);
+   
 
   return (
     <Navbar style={{ backgroundColor: '#232D3F' }} expand="lg" variant="dark">

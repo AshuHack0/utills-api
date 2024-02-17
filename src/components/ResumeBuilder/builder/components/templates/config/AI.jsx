@@ -24,14 +24,6 @@
  
 
 
-    // const addMessageToConversation = (role, content) => {
-    //   setConversation((prevConversation) => [...prevConversation, { role, content }]);
-    //   setLoading(false);
-    // };
-  
-
-
-
     const accessNestedProperty = (obj, path) => {
       return path.split('.').reduce((acc, key) => (acc && acc[key] !== 'undefined' ? acc[key] : undefined), obj);
     };
@@ -353,7 +345,6 @@
     return (
       <>
         <div   style={{  padding:'20px'}}> 
-        
         <div style={{backgroundColor:'hsl(222, 45%, 96%)'}} >
         <div>
           {loading ? (

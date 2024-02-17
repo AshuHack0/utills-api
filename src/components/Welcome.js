@@ -137,7 +137,7 @@ Explore our collection of real resume examples to gain inspiration and insight i
                                    
                                     <Accordion defaultActiveKey="0" className='mt-4'>
                                         <Accordion.Item eventKey="0">
-                                            <Accordion.Header> Why is Kickresume the best resume builder online?</Accordion.Header>
+                                            <Accordion.Header> Why is MyFuse the best resume builder online?</Accordion.Header>
                                             <Accordion.Body>
                                             <p>Because it offers a comprehensive set of features and benefits designed to make the job search journey easier and more effective. Here's how:</p>
 
