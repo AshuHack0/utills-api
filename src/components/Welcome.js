@@ -4,15 +4,15 @@ import Footer from "./ResumeBuilder/builder/components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Welcome.module.css";
 import template from "./ResumeBuilder/assets/images/ashu.png";
-import template2 from "./ResumeBuilder/assets/images/ashu2.png"
-import template3 from "./ResumeBuilder/assets/images/IITN.png"
-import template4 from "./ResumeBuilder/assets/images/IIT.png"
+import template2 from "./ResumeBuilder/assets/images/ashu2.png";
+import template3 from "./ResumeBuilder/assets/images/IITN.png";
+import template4 from "./ResumeBuilder/assets/images/IIT.png";
 import { NavLink } from "react-router-dom";
 import PrevImage from "./ResumeBuilder/assets/images/preview.png";
 import Accordion from "react-bootstrap/Accordion";
 import allTemp from "./ResumeBuilder/assets/images/allTemplate.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 function handleClick() {
   localStorage.removeItem("template");
 }
@@ -22,8 +22,11 @@ const Welcome = () => {
     <div>
       <MyResponsiveNavbar />
       <div className={`container-fluid  ${styles.background}`}>
-        <div className="row  " style={{display:'flex'}}>
-          <div className="col-md-7 " style={{marginTop:'2rem' , marginBottom:'2rem'}}>
+        <div className="row  " style={{ display: "flex" }}>
+          <div
+            className="col-md-7 "
+            style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          >
             <div className={`container  ${styles.leftbox}`}>
               <div className={`row ${styles.leftboxinner}`}>
                 <div className={`col-md-10 `}>
@@ -32,7 +35,12 @@ const Welcome = () => {
                     MyFuse.
                   </h6>
                   <h1 className={styles.heading}>
-                    Elevate your career <br /> with our AI resume builder
+                    Elevate your career <br /> with our{" "}
+                    <span style={{ color: "rgba(107,87,255)" }}>
+                      
+                      AI resume   
+                    </span>
+                  {" "}   builder
                   </h1>
                   <p className={styles.paragraph}>
                     Craft a polished resume swiftly using our AI-powered
@@ -73,50 +81,67 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className={`col-md-5   ${styles.templateBox}`} >
-          <Carousel showThumbs={false} autoPlay={true} interval={3000} infiniteLoop={true} showStatus={false}>
-                <div>
-                <img src={template} className={`img-fluid ${styles.templateImage}`} alt="" />
-                    
-                </div>
-                <div>
-                    <img src={template2} className={`img-fluid ${styles.templateImage}`} alt="" />
-                     
-                </div>
-                <div>
-                <img src={template4} className={`img-fluid ${styles.templateImage}`}  alt=""/>
-                   
-                </div>
-                <div>
-                <img src={template3} className={`img-fluid ${styles.templateImage}`} alt="" />
-                   
-                </div>
+          <div className={`col-md-5   ${styles.templateBox}`}>
+            <Carousel
+              showThumbs={false}
+              autoPlay={true}
+              interval={3000}
+              infiniteLoop={true}
+              showStatus={false}
+            >
+              <div>
+                <img
+                  src={template}
+                  className={`img-fluid ${styles.templateImage}`}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src={template2}
+                  className={`img-fluid ${styles.templateImage}`}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src={template4}
+                  className={`img-fluid ${styles.templateImage}`}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src={template3}
+                  className={`img-fluid ${styles.templateImage}`}
+                  alt=""
+                />
+              </div>
             </Carousel>
-            {/* <img
-              src={template}
-              className={`img-fluid ${styles.templateImage}`}
-            /> */}
           </div>
         </div>
       </div>
 
-      <div className={`container-fluid   `}>
+      <div className={`container-fluid `} style={{  background: 'linear-gradient(180deg, #F7F5FF 0%, #FFF 100%)' , paddingTop:'4rem'}}> 
+         <h1 className={styles.heading} style={{textAlign:"center" , marginTop:'4rem'}}>New <span style={{ color: "rgba(107,87,255)" }}>AI </span>  Features Unleash Your Creativity</h1>
         <div className="row ">
           <div
             className={`col-md-6  d-flex justify-content-center align-items-center`}
           >
             <img
               src="https://aicw.iamleehom.com/assets/assets.97b477b5.gif"
-              className={`img-fluid `} alt=""
+              className={`img-fluid `}
+              alt=""
             />
           </div>
-          <div className="col-md-5">
+          <div className="col-md-5"> 
+             
             <div className={`container  ${styles.leftbox}`}>
               <div className={`row ${styles.leftboxinner}`}>
                 <div className={`col-md-10 `}>
                   <h6 className={styles.paragraph}>AI Resume Builder</h6>
                   <h1 className={styles.heading}>
-                    AI Writes Your Resume. <br /> Let Technology Take the Lead
+                  <span style={{ color: "rgba(107,87,255)" }}> AI Writes </span> Your Resume. <br /> Let Technology Take the Lead
                   </h1>
                   <p className={styles.paragraph}>
                     {" "}
@@ -148,7 +173,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className={`container-fluid  mt-4 mb-4`}>
+      <div className={`container-fluid  mt-4 mb-4`} >
         <div className="row ">
           <div className="col-md-5">
             <div className={`container   `}>
@@ -156,7 +181,7 @@ const Welcome = () => {
                 <div className={`col-md-10 `}>
                   <h6 className={styles.paragraph}>Resume Templates</h6>
                   <h1 className={styles.heading}>
-                    Select a template and personalize your resume{" "}
+                    Select a template and personalize your <span style={{ color: "rgba(107,87,255)" }}> AI resume</span>  
                   </h1>
                   <p className={styles.paragraph}>
                     Accelerate your job search with visually striking resumes
@@ -194,13 +219,14 @@ const Welcome = () => {
           >
             <img
               src={PrevImage}
-              className={`img-fluid ${styles.previewImage} `}  alt=""
+              className={`img-fluid ${styles.previewImage} `}
+              alt=""
             />
           </div>
         </div>
       </div>
 
-      <div className={`container-fluid   `}>
+      <div className={`container-fluid   `} >
         <div className="row ">
           <div
             className={`col-md-6  d-flex  justify-content-center align-items-center `}
