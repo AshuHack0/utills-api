@@ -96,6 +96,7 @@
 }
 .paragraph {
     /* font-family: 'Mukta', sans-serif; */
+    color:#4f4851
 }
 .section2image {
     height: 20vw;
@@ -117,4 +118,81 @@
     text-shadow: 0px 0.5px 1px rgba(102, 55, 201, 0.25);
     display: inline-block;
     padding: 0 10px;
+
+}
+ 
+
+
+.background3{
+    background-image: url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/6b8b1aa7-54df-4646-a54d-852caa847833.svg), url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/8c077d2c-6aae-42ee-96a6-25e1292a60c2.svg);
+    background-repeat: no-repeat;
+    background-position: 105% center, -29% 180%;
+    background-size: 30%, 35%;
+   /* height: 20vw;  */
+   border-radius: 10px;
+    background-color: #2a182e!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.background3Back {
+    background-image: url(https://assets.softr-files.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/86dd6b2d-6773-499e-99a1-d6c28e9e5338.svg);
+   margin-bottom: 3rem;
+   margin-top: 3rem;
+}
+.background4Back {
+    background-image: url(https://assets.softr-files.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/c17e1305-a4a8-45b4-8d9c-216bdde36fba.svg);
+   margin-bottom: 3rem;
+   margin-top: 3rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   padding: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 3rem;
+   margin-top: 3rem;
+   flex-direction: column;
+   padding: 3rem;
+}
+
+.background4{
+    /* background-image: url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/6b8b1aa7-54df-4646-a54d-852caa847833.svg), url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/8c077d2c-6aae-42ee-96a6-25e1292a60c2.svg); */
+    background-repeat: no-repeat;
+    background-position: 105% center, -29% 180%;
+    background-size: 30%, 35%;
+   /* height: 20vw;  */
+   border-radius: 10px;
+    background-color: rgb(255, 179, 11)!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+
+ 
+
+.background5{
+    /* background-image: url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/6b8b1aa7-54df-4646-a54d-852caa847833.svg), url(https://softr-assets-eu-prod.s3.eu-central-1.amazonaws.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/8c077d2c-6aae-42ee-96a6-25e1292a60c2.svg); */
+    background-repeat: no-repeat;
+    background-position: 105% center, -29% 180%;
+    background-size: 30%, 35%;
+   /* height: 20vw;  */
+   border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    /* padding: 3rem; */
 }
