@@ -50,6 +50,11 @@ function App() {
   }, []);
 
 
+  useEffect(()=>{
+    localStorage.removeItem("template");
+  },[])
+
+
   console.log(`this is user deltails ${user.isauth}`);
 
 

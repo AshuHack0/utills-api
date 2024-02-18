@@ -6,6 +6,8 @@ import { NavLink } from "react-bootstrap";
 
 const ChooseTemplate = () => {
   const { templates, handleTemplateChange } = useResume();
+
+ 
   return (
     <div className={styles.container}>
       {/* <div className={styles.heading}>Create your professional resume effortlessly with integrated AI!</div> */}
@@ -33,9 +35,7 @@ const ChooseTemplate = () => {
             </div>
           );
         })}
-        {/* <div  >
-          <img src={bot} alt="" srcset="" height={'400'} />
-        </div> */}
+        
       </div>
     </div>
   );
