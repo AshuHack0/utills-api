@@ -31,16 +31,15 @@ const Welcome = () => {
               <div className={`row ${styles.leftboxinner}`}>
                 <div className={`col-md-10 `}>
                   <h6 className={styles.paragraph}>
-                    Craft a standout resume effortlessly with AI assistance from
-                    MyFuse.
+                    {/* Craft a standout resume effortlessly with AI assistance from
+                    MyFuse. */}
+                    MyFuse Resume Builder <img src="https://images.hitpaw.net/landing-pages/aiicon.svg" className="ms-2" /> 
+                    <span className={`${styles.AIProwered }`}>AI Powered</span>
                   </h6>
                   <h1 className={styles.heading}>
                     Elevate your career <br /> with our{" "}
-                    <span style={{ color: "rgba(107,87,255)" }}>
-                      
-                      AI resume   
-                    </span>
-                  {" "}   builder
+                    <span style={{ color: "rgba(107,87,255)" }}>AI resume</span>{" "}
+                    builder
                   </h1>
                   <p className={styles.paragraph}>
                     Craft a polished resume swiftly using our AI-powered
@@ -54,10 +53,11 @@ const Welcome = () => {
                 <div className="col-md-10">
                   <NavLink to="/welcome">
                     <button
-                      className="btn btn-success me-4"
+                      className="btn   me-4 mb-3"
                       style={{
                         backgroundColor: "rgb(35, 45, 63)",
                         padding: ".6rem",
+                        color:'white'
                       }}
                     >
                       {" "}
@@ -67,7 +67,7 @@ const Welcome = () => {
 
                   <NavLink to="/welcome" onClick={handleClick}>
                     <button
-                      className="btn  "
+                      className="btn mb-3 "
                       style={{
                         border: "2px solid rgb(35, 45, 63) ",
                         padding: ".6rem",
@@ -122,8 +122,20 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className={`container-fluid `} style={{  background: 'linear-gradient(180deg, #F7F5FF 0%, #FFF 100%)' , paddingTop:'4rem'}}> 
-         <h1 className={styles.heading} style={{textAlign:"center" , marginTop:'4rem'}}>New <span style={{ color: "rgba(107,87,255)" }}>AI </span>  Features Unleash Your Creativity</h1>
+      <div
+        className={`container-fluid `}
+        style={{
+          background: "linear-gradient(180deg, #F7F5FF 0%, #FFF 100%)",
+          paddingTop: "4rem",
+        }}
+      >
+        <h1
+          className={styles.heading}
+          style={{ textAlign: "center", marginTop: "4rem" }}
+        >
+          New <span style={{ color: "rgba(107,87,255)" }}>AI </span> Features
+          Unleash Your Creativity
+        </h1>
         <div className="row ">
           <div
             className={`col-md-6  d-flex justify-content-center align-items-center`}
@@ -134,14 +146,17 @@ const Welcome = () => {
               alt=""
             />
           </div>
-          <div className="col-md-5"> 
-             
+          <div className="col-md-5">
             <div className={`container  ${styles.leftbox}`}>
               <div className={`row ${styles.leftboxinner}`}>
                 <div className={`col-md-10 `}>
                   <h6 className={styles.paragraph}>AI Resume Builder</h6>
                   <h1 className={styles.heading}>
-                  <span style={{ color: "rgba(107,87,255)" }}> AI Writes </span> Your Resume. <br /> Let Technology Take the Lead
+                    <span style={{ color: "rgba(107,87,255)" }}>
+                      {" "}
+                      AI Writes{" "}
+                    </span>{" "}
+                    Your Resume. <br /> Let Technology Take the Lead
                   </h1>
                   <p className={styles.paragraph}>
                     {" "}
@@ -156,10 +171,11 @@ const Welcome = () => {
                 <div className="col-md-10">
                   <NavLink to="/">
                     <button
-                      className="btn btn-success me-4"
+                      className="btn   me-4"
                       style={{
                         backgroundColor: "rgb(35, 45, 63)",
                         padding: ".7rem",
+                        color:'white'
                       }}
                     >
                       {" "}
@@ -173,15 +189,19 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className={`container-fluid  mt-4 mb-4`} >
-        <div className="row ">
+      <div className={`container-fluid    mb-4`} style={{ marginTop: "4rem" }}>
+        <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-md-5">
             <div className={`container   `}>
               <div className={`row ${styles.leftboxinner}`}>
-                <div className={`col-md-10 `}>
+                <div className={`col-md-10 mt-4`}>
                   <h6 className={styles.paragraph}>Resume Templates</h6>
                   <h1 className={styles.heading}>
-                    Select a template and personalize your <span style={{ color: "rgba(107,87,255)" }}> AI resume</span>  
+                    Select a template and personalize your{" "}
+                    <span style={{ color: "rgba(107,87,255)" }}>
+                      {" "}
+                      AI resume
+                    </span>
                   </h1>
                   <p className={styles.paragraph}>
                     Accelerate your job search with visually striking resumes
@@ -195,10 +215,11 @@ const Welcome = () => {
                 <div className="col-md-10">
                   <NavLink to="/welcome">
                     <button
-                      className="btn btn-success me-4"
+                      className="btn   me-4"
                       style={{
                         backgroundColor: "rgb(35, 45, 63)",
                         padding: ".6rem",
+                        color:'white'
                       }}
                     >
                       {" "}
@@ -210,11 +231,12 @@ const Welcome = () => {
             </div>
           </div>
           <div
-            className={`col-md-7  `}
+            className={`col-md-7  ${styles.middleTOP} `}
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              marginBottom:'4rem!important'
             }}
           >
             <img
@@ -226,20 +248,29 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className={`container-fluid   `} >
+      <div className={`container-fluid   `} style={{ marginTop: "5rem" }}>
         <div className="row ">
           <div
-            className={`col-md-6  d-flex  justify-content-center align-items-center `}
+            className={`col-md-7  d-flex  justify-content-center align-items-center `}
           >
-            <img src={allTemp} className={`img-fluid `} alt="" />
+            <img
+              src={allTemp}
+              className={`img-fluid ${styles.previewImage} `}
+              alt=""
+            />
           </div>
           <div className="col-md-5">
             <div className={`container  ${styles.leftbox}`}>
               <div className={`row ${styles.leftboxinner}`}>
-                <div className={`col-md-10 `}>
+                <div className={`col-md-10 mt-4 `}>
                   <h6 className={styles.paragraph}>Resume Examples</h6>
                   <h1 className={styles.heading}>
-                    Inspiration from Real Resume Examples
+                    Inspiration from{" "}
+                    <span style={{ color: "rgba(107,87,255)" }}>
+                      {" "}
+                      Real Resume{" "}
+                    </span>{" "}
+                    Examples
                   </h1>
                   <p className={styles.paragraph}>
                     Explore our collection of real resume examples to gain
@@ -256,10 +287,11 @@ const Welcome = () => {
                 <div className="col-md-10">
                   <NavLink to="/">
                     <button
-                      className="btn btn-success me-4"
+                      className="btn   me-4"
                       style={{
                         backgroundColor: "rgb(35, 45, 63)",
                         padding: ".7rem",
+                        color:'white'
                       }}
                     >
                       {" "}
@@ -273,7 +305,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className={`container-fluid   mb-4   `}>
+      <div className={`container-fluid   mb-4  mt-4 `}>
         <div className="row d-flex justify-content-center ">
           <div className="col-md-8 col-12 mt-4">
             <h1 style={{ textAlign: "center" }}>
