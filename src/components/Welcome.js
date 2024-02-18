@@ -131,7 +131,7 @@ const Welcome = () => {
       >
         <h1
           className={styles.heading}
-          style={{ textAlign: "center", marginTop: "4rem" }}
+          style={{ textAlign: "center", marginTop: "1.6rem" }}
         >
           New <span style={{ color: "rgba(107,87,255)" }}>AI </span> Features
           Unleash Your Creativity
