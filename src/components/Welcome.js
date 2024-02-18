@@ -128,10 +128,10 @@ const Welcome = () => {
       <div className={`container   ${styles.background3Back}`}>
         <div className="row  " style={{ display: "flex" , justifyContent:'center'  }}>
           <div
-            className={`col-md-10 ${styles.background3} `}
+            className={`col-md-10 ${styles.background3} d-flex justify-content-center`}
           >
-            <h1 className={styles.heading} style={{color:'white'}}>This website is build for Myfuse.In</h1>
-            <p className={styles.paragraph} style={{color:'white' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' }}>Discover a world of opportunities with internships, projects, and a gateway to your professional future.</p>
+            <h1 className={styles.heading} style={{color:'white' , textAlign:'center'}}>This Resume Builder is build for Myfuse.In</h1>
+            <p className={styles.paragraph} style={{color:'white' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Discover a world of opportunities with internships, projects, and a gateway to your professional future.</p>
             <NavLink to="https://myfuse.in/home">
                     <button
                       className="btn   me-4 mb-3"
@@ -343,8 +343,8 @@ const Welcome = () => {
           <div
             className={`col-md-10 ${styles.background4} `}
           >
-            <h1 className={styles.heading} style={{color:'rgb(35, 45, 63)'}}>Your Gateway to Infinite Opportunities</h1>
-            <p className={styles.paragraph} style={{color:'rgb(35, 45, 63)' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
+            <h1 className={styles.heading} style={{color:'rgb(35, 45, 63)' , textAlign:'center' }}>Your Gateway to Infinite Opportunities</h1>
+            <p className={styles.paragraph} style={{color:'rgb(35, 45, 63)' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
             <NavLink to="https://myfuse.in/home">
                     <button
                       className="btn   me-4 mb-3"
