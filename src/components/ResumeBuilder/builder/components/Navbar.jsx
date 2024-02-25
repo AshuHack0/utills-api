@@ -85,6 +85,7 @@ function MyResponsiveNavbar() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   );
