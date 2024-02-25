@@ -7,48 +7,11 @@ import axios from 'axios';
 
 
 
-const getUser = async () => {
-  try {
-    const response = await axios.get('https://myfuse.in/dashboard/api.php', {
-      withCredentials: true,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.status === 200) {
-      throw new Error('Network response was not ok');
-    }
-
-    const data = response.data;
-    console.log('Data fetched successfully:', data);
-    return data;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
-  }
-};
-
+ 
 
 function MyResponsiveNavbar() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const fetchUserAndSetUser = async () => {
-      try {
-        const userData = await getUser();
-        setUser(userData);
-      } catch (error) {
-        console.error('Error setting user:', error);
-      }
-    };
-
-    fetchUserAndSetUser();
-  }, []);
+ 
   
-
-   
-
   return (
     <Navbar style={{ backgroundColor: '#232D3F' }} expand="lg" variant="dark">
       <Container>
@@ -69,20 +32,30 @@ function MyResponsiveNavbar() {
               Home
             </Nav.Link>
           </Nav>
-          <Nav>
-          {/* <Nav.Link href="https://myfuse.in/login-con/index.php" style={{ color: 'white' }}>
-              Login
-            </Nav.Link>
-            <Nav.Link href="https://myfuse.in/login-con/index.php" style={{ color: 'white' }}>
-              Create Account
-            </Nav.Link> */}
-            <NavDropdown title={<span style={{ color: 'white' }}>{user ? user.name : 'Unknown User'}</span>} id="basic-nav-dropdown">
+          <Nav> 
+          <div style={{
+    height: '34px',
+    background: '#0073e6',
+    border: '1px solid #0073e6',
+    borderRadius: '50px',
+    justifyContent: 'center',
+    color: '#fff',
+    fontWeight: 500,
+    fontSize: '12px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    cursor: 'pointer',
+    transition: '0.3s',
+    padding: '0 15px',
+    marginLeft: '15px'
+}}>
+    Login <img src="https://cdn.unstop.com/uploads/images/unstop/menu_icons/login_icon.svg" alt="" style={{    filter: 'brightness(0) invert(1)', width:'1rem' , marginLeft:'.5rem'}}/>
+</div>
+
+            
+            {/* <NavDropdown title={<span style={{ color: 'white' }}>jlljl</span>} id="basic-nav-dropdown">
               <NavDropdown.Item href="https://myfuse.in/login-con/index.php">Logout</NavDropdown.Item>
-              {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
         
