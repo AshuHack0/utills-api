@@ -53,7 +53,7 @@ const Login = () => {
 
   useGoogleOneTapLogin({
     onSuccess: credentialResponse => {
-       
+      console.log(credentialResponse)
       const decode = jwtDecode(credentialResponse.credential);
       console.log(decode);
     },
@@ -77,7 +77,8 @@ const Login = () => {
 
                           
                            <GoogleLogin
-                                onSuccess={credentialResponse => {
+                                onSuccess={credentialResponse => { 
+                                  console.log(credentialResponse)
                                   const decode = jwtDecode(credentialResponse.credential);
                                            console.log(decode);
                                 }}
