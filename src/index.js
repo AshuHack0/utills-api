@@ -6,15 +6,18 @@ import App from "./App";
 import { HashRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import AuthProvider from "./components/ResumeBuilder/builder/components/context/auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
     <Toaster />
+    <AuthProvider>
       <GoogleOAuthProvider clientId="490977590312-bh47cbdd4doi3jt3fq38g9esior1v3f9.apps.googleusercontent.com">
       <App />
       </GoogleOAuthProvider>
+      </AuthProvider>
     </HashRouter>
   </React.StrictMode>
 );

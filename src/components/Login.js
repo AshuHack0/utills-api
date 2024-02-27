@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-// import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
@@ -11,7 +11,7 @@ const Login = () => {
 
   const [email , setEmail] = useState();
   const [password , setpassword] =useState();  
-  //  const Navigate = useNavigate(); 
+   const Navigate = useNavigate(); 
   //  const location = useLocation();
     const {auth , setAuth} = useAuth();
     // console.log(useAuth);
@@ -33,7 +33,7 @@ const Login = () => {
             }); 
              
             localStorage.setItem('auth',JSON.stringify(res.data))
-            // Navigate( location.state || '/');
+            Navigate( '/welcome');
            
 
     }

@@ -1,9 +1,9 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from './context/auth';
+import {toast} from 'react-hot-toast'
 
 
 
@@ -11,8 +11,21 @@ import { NavLink } from "react-router-dom";
  
 
 function MyResponsiveNavbar() {
- 
-  
+  const navigate = useNavigate(); 
+  const {auth , setAuth} = useAuth();
+  const handleLogout = () =>{
+    setAuth({
+      ...auth,
+      user:null,
+      token:""
+    })
+    localStorage.removeItem("auth"); 
+    toast.success('Logout Successful!!');
+    navigate('/'); // Navigate to the home page after logout
+
+  }
+
+
   return (
     <Navbar style={{ backgroundColor: '#232D3F' }} expand="lg" variant="dark">
       <Container>
@@ -34,6 +47,10 @@ function MyResponsiveNavbar() {
             </Nav.Link>
           </Nav>
           <Nav> 
+
+            {
+
+             !auth.user ? (
             <NavLink to="/login">
           <div style={{
     height: '34px',
@@ -55,9 +72,17 @@ function MyResponsiveNavbar() {
 </div>
 
 </NavLink>
-            {/* <NavDropdown title={<span style={{ color: 'white' }}>jlljl</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="https://myfuse.in/login-con/index.php">Logout</NavDropdown.Item>
-            </NavDropdown> */}
+             ) : (  
+
+               <NavDropdown title={<span style={{ color: 'white' }}> {auth?.user[0]?.firstname}</span>} id="basic-nav-dropdown">
+               <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+              </NavDropdown> 
+            
+            )
+}
+           
+
+         
           </Nav>
         </Navbar.Collapse>
         
