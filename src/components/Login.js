@@ -68,7 +68,7 @@ const Login = () => {
           <div className={`row `} style={{  display:'flex' , justifyContent:'center' , alignItems:'center' }}>
             <div className='col-12 col-md-6' style={{backgroundColor:'white', height:'100vh' , zIndex:'2'}}>
                  <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
-                    <div className='col-11 col-md-7 d-flex justify-content-center'  >
+                    <div className='col-11 col-md-7 '  >
                           <div>
                            
                            <h1 className={` text-center ${styles.logo}`}> MyFuse<span style={{color:"#f96f59"}}>.</span>In</h1>
