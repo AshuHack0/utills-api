@@ -13,11 +13,22 @@ import Accordion from "react-bootstrap/Accordion";
 import allTemp from "./ResumeBuilder/assets/images/allTemplate.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { useGoogleOneTapLogin } from '@react-oauth/google';
 function handleClick() {
   localStorage.removeItem("template");
 }
 
 const Welcome = () => {
+  useGoogleOneTapLogin({
+    onSuccess: credentialResponse => {
+      console.log(credentialResponse);
+      console.log(credentialResponse.name);
+    },
+    onError: () => {
+      console.log('Login Failed');
+    },
+  });
+
   return (
     <div>
       <MyResponsiveNavbar />

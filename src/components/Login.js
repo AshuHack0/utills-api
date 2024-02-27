@@ -77,7 +77,7 @@ const Login = () => {
                           
                            <GoogleLogin
                                 onSuccess={credentialResponse => {
-                                  console.log(credentialResponse);
+                                  console.log(credentialResponse.profile);
                                 }}
                                 onError={() => {
                                   console.log('Login Failed');
