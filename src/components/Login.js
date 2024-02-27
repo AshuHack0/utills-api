@@ -5,7 +5,7 @@ import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
 import styles  from './Login.module.css'
-// import logi from './ResumeBuilder/assets/logii.jpg'
+import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
 const Login = () => {
@@ -53,8 +53,9 @@ const Login = () => {
 
   useGoogleOneTapLogin({
     onSuccess: credentialResponse => {
-      console.log(credentialResponse);
-      console.log(credentialResponse.name);
+       
+      const decode = jwtDecode(credentialResponse.credential);
+      console.log(decode);
     },
     onError: () => {
       console.log('Login Failed');
@@ -67,7 +68,7 @@ const Login = () => {
           <div className={`row `} style={{  display:'flex' , justifyContent:'center' , alignItems:'center' }}>
             <div className='col-12 col-md-6' style={{backgroundColor:'white', height:'100vh' , zIndex:'2'}}>
                  <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
-                    <div className='col-11 col-md-7'  >
+                    <div className='col-11 col-md-7 d-flex justify-content-center'  >
                           <div>
                            
                            <h1 className={` text-center ${styles.logo}`}> MyFuse<span style={{color:"#f96f59"}}>.</span>In</h1>
@@ -77,13 +78,14 @@ const Login = () => {
                           
                            <GoogleLogin
                                 onSuccess={credentialResponse => {
-                                  console.log(credentialResponse.profile);
+                                  const decode = jwtDecode(credentialResponse.credential);
+                                           console.log(decode);
                                 }}
                                 onError={() => {
                                   console.log('Login Failed');
                                 }}
                               />
-                              
+                              <br/>
                            <p className='text-center'>or</p>
 
                            <form onSubmit={handleSubmit} >
