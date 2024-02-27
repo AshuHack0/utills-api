@@ -7,6 +7,7 @@ import axios from 'axios';
 import styles  from './Login.module.css'
 // import logi from './ResumeBuilder/assets/logii.jpg'
 import { GoogleLogin } from '@react-oauth/google';
+import { useGoogleOneTapLogin } from '@react-oauth/google';
 const Login = () => {
 
   const [email , setEmail] = useState();
@@ -48,6 +49,19 @@ const Login = () => {
         toast.error("Please Enter Correct User Id and password")
       }
   }
+
+
+  useGoogleOneTapLogin({
+    onSuccess: credentialResponse => {
+      console.log(credentialResponse);
+      console.log(credentialResponse.name);
+    },
+    onError: () => {
+      console.log('Login Failed');
+    },
+  });
+
+
   return (
     <div className={`container-fluid  ${styles.main}`} >
           <div className={`row `} style={{  display:'flex' , justifyContent:'center' , alignItems:'center' }}>
@@ -69,6 +83,7 @@ const Login = () => {
                                   console.log('Login Failed');
                                 }}
                               />
+                              
                            <p className='text-center'>or</p>
 
                            <form onSubmit={handleSubmit} >
