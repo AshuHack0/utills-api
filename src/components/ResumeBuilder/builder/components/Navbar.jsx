@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { NavLink } from "react-router-dom";
 
 
 
@@ -33,6 +34,7 @@ function MyResponsiveNavbar() {
             </Nav.Link>
           </Nav>
           <Nav> 
+            <NavLink to="/login">
           <div style={{
     height: '34px',
     background: '#0073e6',
@@ -52,7 +54,7 @@ function MyResponsiveNavbar() {
     Login <img src="https://cdn.unstop.com/uploads/images/unstop/menu_icons/login_icon.svg" alt="" style={{    filter: 'brightness(0) invert(1)', width:'1rem' , marginLeft:'.5rem'}}/>
 </div>
 
-            
+</NavLink>
             {/* <NavDropdown title={<span style={{ color: 'white' }}>jlljl</span>} id="basic-nav-dropdown">
               <NavDropdown.Item href="https://myfuse.in/login-con/index.php">Logout</NavDropdown.Item>
             </NavDropdown> */}
