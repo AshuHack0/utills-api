@@ -112,7 +112,10 @@ const SingUp = () => {
                             </div>
                              <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign Up</button></div>
                             <br/>
+                            <p className='text-center'>or</p>
                              <div className='d-flex justify-content-center'>
+                      
+                       
                            <GoogleLogin
                                 onSuccess={credentialResponse => { 
                                   console.log(credentialResponse)
@@ -125,7 +128,6 @@ const SingUp = () => {
                               />
                               </div>
                               <br/>
-                           <p className='text-center'>or</p>
                              <p className='text-center mt-4' style={{fontWeight:500 , cursor:'pointer'}} onClick={handleNavigate}>Already have an account? <span style={{color:"#4D85D5"}}>Sign In</span></p>
                             </form> 
                     </div>
