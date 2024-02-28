@@ -8,6 +8,7 @@ import styles  from './Signup.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
+import Form from 'react-bootstrap/Form';
 const SingUp = () => {
 
   const [email , setEmail] = useState();
@@ -110,6 +111,11 @@ const SingUp = () => {
                             <div className="mb-3">
                               <input type="cpassword" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Confrim Password "  value={cpassword} onChange={(e)=>{setcpassword(e.target.value)}}  />
                             </div>
+                            <div className='d-flex'>
+                            <Form.Check aria-label="option 1" /> <span className='ms-2'>I accept the
+                              terms and conditions</span>
+                            </div>
+                           
                              <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign Up</button></div>
                             <br/>
                             <p className='text-center'>or</p>
