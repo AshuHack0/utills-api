@@ -5,6 +5,7 @@ import Welcome from "./components/Welcome";
 import { useEffect } from "react";
 import Login from "./components/Login";
 import PrivateRoute from "./Routes/PrivateRoute";
+import SingUp from "./components/Signup";
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
       </Route>
       <Route path="/" element={<Welcome />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SingUp />} />
     </Routes>
  
   );

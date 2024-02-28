@@ -4,23 +4,28 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
-import styles  from './Login.module.css'
+import styles  from './Signup.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
-const Login = () => {
+const SingUp = () => {
 
   const [email , setEmail] = useState();
+  const [firstName , setFirstName] = useState();
+  const [lastname , setlastName] = useState();
+  const [phone , setPhone] = useState();
   const [password , setpassword] =useState();  
+  const [cpassword , setcpassword] =useState();  
+
+
    const Navigate = useNavigate(); 
   //  const location = useLocation();
     const {auth , setAuth} = useAuth();
     // console.log(useAuth);
-   
 
     const handleNavigate = () => {
-      Navigate( '/signup');
-    };
+        Navigate( '/login');
+      };
    const handleSubmit = async(e) =>{
     e.preventDefault();
       try {
@@ -74,10 +79,40 @@ const Login = () => {
                     <div className='col-11 col-md-7 '  >
                           <div>
                            
-                           <h1 className={` text-center ${styles.logo}`}> MyFuse<span style={{color:"#f96f59"}}>.</span>In</h1>
+                           <h1 className={` text-center ${styles.logo}`}> Sign up for free and
+                               start building in minutes</h1>
                             
                             </div>
-                           <div className='d-flex justify-content-center'>
+                          
+                              
+            
+
+                           <form onSubmit={handleSubmit} > 
+                             
+                             <div className='d-flex'>
+                                    <div className="mb-3 me-2">
+                                        <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Firstname " value={firstName}  onChange={(e)=>{setFirstName(e.target.value)}}  />
+                                    </div>
+                                    <div className="mb-3">
+                                        <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="lastname " value={lastname}  onChange={(e)=>{setlastName(e.target.value)}}  />
+                                    </div>
+                             </div>
+
+                            <div className="mb-3">
+                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}}  />
+                            </div>
+                            <div className="mb-3">
+                              <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder= "Phone No" value={phone}  onChange={(e)=>{setPhone(e.target.value)}}  />
+                            </div>
+                            <div className="mb-3">
+                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  />
+                            </div>
+                            <div className="mb-3">
+                              <input type="cpassword" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Confrim Password "  value={cpassword} onChange={(e)=>{setcpassword(e.target.value)}}  />
+                            </div>
+                             <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign Up</button></div>
+                            <br/>
+                             <div className='d-flex justify-content-center'>
                            <GoogleLogin
                                 onSuccess={credentialResponse => { 
                                   console.log(credentialResponse)
@@ -91,22 +126,7 @@ const Login = () => {
                               </div>
                               <br/>
                            <p className='text-center'>or</p>
-
-                           <form onSubmit={handleSubmit} >
-                            <div className="mb-3">
-                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}}  />
-                            </div>
-                            <div className="mb-3">
-                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  />
-                            </div>
-                             <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign In</button></div>
-                             <p className='text-center mt-3 ' style={{fontWeight:'bold' , color:"#4D85D5"}}>Forgot Password ?</p>
-                              
-                            
-                             <p className='text-center mt-4' style={{fontWeight:500 , cursor:'pointer'}} onClick={handleNavigate}>
-                                Haven’t got an account? <span style={{color:"#4D85D5"}}>Sign Up</span>
-                              </p>
-
+                             <p className='text-center mt-4' style={{fontWeight:500 , cursor:'pointer'}} onClick={handleNavigate}>Already have an account? <span style={{color:"#4D85D5"}}>Sign In</span></p>
                             </form> 
                     </div>
                  </div>
@@ -130,4 +150,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SingUp
