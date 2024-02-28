@@ -140,7 +140,7 @@ const SingUp = () => {
             <div className={`${styles.circle}`}></div>
                     <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
                       <div className={`col-11 col-md-7 ${styles.reviewtext}`}  >
-                      "Your career deserves the best. Build a standout resume effortlessly with MyFuse.in – where quality meets simplicity." <br/> - CEO Myfuse
+                      " Embark on a journey towards professional success with MyFuse.in, where crafting an exceptional resume is as simple as a few clicks." <br/> - CEO Myfuse
                       </div>
                   </div>
                  
