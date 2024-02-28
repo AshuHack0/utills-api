@@ -74,8 +74,7 @@ const Login = () => {
                            <h1 className={` text-center ${styles.logo}`}> MyFuse<span style={{color:"#f96f59"}}>.</span>In</h1>
                             
                             </div>
-
-                          
+                           <div className='d-flex justify-content-center'>
                            <GoogleLogin
                                 onSuccess={credentialResponse => { 
                                   console.log(credentialResponse)
@@ -86,6 +85,7 @@ const Login = () => {
                                   console.log('Login Failed');
                                 }}
                               />
+                              </div>
                               <br/>
                            <p className='text-center'>or</p>
 
