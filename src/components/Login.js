@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
-import styles  from './Login.module.css'
+import styles  from './assets/Login.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
@@ -18,6 +18,9 @@ const Login = () => {
     // console.log(useAuth);
    
 
+    const handleNavigateForgot = () => {
+      Navigate( '/forgot-password');
+    };
     const handleNavigate = () => {
       Navigate( '/signup');
     };
@@ -100,7 +103,7 @@ const Login = () => {
                               <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  />
                             </div>
                              <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign In</button></div>
-                             <p className='text-center mt-3 ' style={{fontWeight:'bold' , color:"#4D85D5"}}>Forgot Password ?</p>
+                             <p className='text-center mt-3 ' style={{fontWeight:'bold' , color:"#4D85D5" , cursor:'pointer'}} onClick={handleNavigateForgot}>Forgot Password ?</p>
                               
                             
                              <p className='text-center mt-4' style={{fontWeight:500 , cursor:'pointer'}} onClick={handleNavigate}>

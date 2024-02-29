@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
-import styles  from './Signup.module.css'
+import styles  from './assets/Signup.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';

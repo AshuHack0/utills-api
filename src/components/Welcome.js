@@ -2,7 +2,7 @@ import React from "react";
 import MyResponsiveNavbar from "./ResumeBuilder/builder/components/Navbar";
 import Footer from "./ResumeBuilder/builder/components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./Welcome.module.css";
+import styles from "./assets/Welcome.module.css";
 import template from "./ResumeBuilder/assets/images/ashu.png";
 import template2 from "./ResumeBuilder/assets/images/ashu2.png";
 import template3 from "./ResumeBuilder/assets/images/IITN.png";

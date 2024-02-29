@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Login from "./components/Login";
 import PrivateRoute from "./Routes/PrivateRoute";
 import SingUp from "./components/Signup";
+import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
  
@@ -21,6 +22,8 @@ function App() {
       <Route path="/" element={<Welcome />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SingUp />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+
     </Routes>
  
   );
