@@ -223,9 +223,10 @@ const Welcome = () => {
                     <button
                       className="btn   me-4"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "#ffb30b",
+                         fontWeight:'700',
                         padding: ".7rem",
-                        color: "white",
+                        
                       }}
                     >
                       {" "}
@@ -267,9 +268,10 @@ const Welcome = () => {
                     <button
                       className="btn   me-4"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "#ffb30b",
+                         fontWeight:'700',
                         padding: ".6rem",
-                        color: "white",
+                        
                       }}
                     >
                       {" "}
@@ -339,9 +341,10 @@ const Welcome = () => {
                     <button
                       className="btn   me-4"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "#ffb30b",
+
                         padding: ".7rem",
-                        color: "white",
+                       fontWeight:'700'
                       }}
                     >
                       {" "}
@@ -362,16 +365,17 @@ const Welcome = () => {
           <div
             className={`col-md-10 ${styles.background4} `} data-aos="flip-up"
           >
-            <h1 className={styles.heading} style={{color:'rgb(35, 45, 63)' , textAlign:'center' }}>Your Gateway to Infinite Opportunities</h1>
-            <p className={styles.paragraph} style={{color:'rgb(35, 45, 63)' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
+            <h1 className={styles.heading} style={{  textAlign:'center' }}>Your Gateway to Infinite Opportunities</h1>
+            <p className={styles.paragraph} style={{ color:'white',  display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
             <NavLink to="https://myfuse.in/home">
                     <button
                       className="btn   me-4 mb-3"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "#ffb30b",
+
                         padding: ".6rem",
-                        color: "white",
-                        fontWeight:600,
+                        
+                        fontWeight:'600',
                         fontSize:"1rem"
                       }}
                     >
@@ -404,7 +408,7 @@ const Welcome = () => {
                     <button
                       className="btn   me-4"
                       style={{
-                        backgroundColor: "rgb(255, 179, 11)",
+                        backgroundColor: "#ffb30b",
                         padding: ".6rem",
                         color: "rgb(35, 45, 63)",
                         fontWeight:600
@@ -724,9 +728,10 @@ const Welcome = () => {
                     <button
                       className="btn   me-4 mb-3"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "#ffb30b",
+
                         padding: ".6rem",
-                        color: "white",
+               
                         fontWeight:600,
                         fontSize:"1rem"
                       }}
@@ -741,7 +746,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
 
       
     </div>
