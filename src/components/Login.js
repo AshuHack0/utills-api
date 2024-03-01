@@ -8,6 +8,7 @@ import styles  from './assets/Login.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
+import logos from './assets/logo.png'
 const Login = () => {
 
   const [email , setEmail] = useState();
@@ -121,6 +122,7 @@ const Login = () => {
             <div className={`${styles.circle}`}></div>
                     <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
                       <div className={`col-11 col-md-7 ${styles.reviewtext}`}  >
+                      <img src="" /> 
                       "Your career deserves the best. Build a standout resume effortlessly with MyFuse.in – where quality meets simplicity." <br/> - CEO Myfuse
                       </div>
                   </div>

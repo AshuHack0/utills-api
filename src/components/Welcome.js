@@ -1,6 +1,6 @@
 import React from "react";
-import MyResponsiveNavbar from "./ResumeBuilder/builder/components/Navbar";
-import Footer from "./ResumeBuilder/builder/components/Footer";
+import MyResponsiveNavbar from "./pages/Navbar";
+import Footer from "./pages/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./assets/Welcome.module.css";
 import template from "./ResumeBuilder/assets/images/ashu.png";
@@ -14,6 +14,10 @@ import allTemp from "./ResumeBuilder/assets/images/allTemplate.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useGoogleOneTapLogin } from '@react-oauth/google';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 function handleClick() {
   localStorage.removeItem("template");
 }
@@ -31,17 +35,18 @@ const Welcome = () => {
 
   return (
     <div>
-      <MyResponsiveNavbar />
+       <MyResponsiveNavbar />
       <div className={`container-fluid  ${styles.background}`}>
+     
         <div className="row  " style={{ display: "flex" }}>
           <div
             className="col-md-7 "
             style={{ marginTop: "2rem", marginBottom: "2rem" }}
           >
             <div className={`container  ${styles.leftbox}`}>
-              <div className={`row ${styles.leftboxinner}`}>
-                <div className={`col-md-10 `}>
-                  <h6 className={styles.paragraph}>
+              <div className={`row ${styles.leftboxinner}`} data-aos="zoom-in">
+                <div className={`col-md-10 `} >
+                  <h6 className={styles.paragraph} style={{color:'white'}}>
                     
                     MyFuse Resume Builder{" "}
                     <img
@@ -50,12 +55,12 @@ const Welcome = () => {
                     />
                     <span className={`${styles.AIProwered}`}>AI Powered</span>
                   </h6>
-                  <h1 className={styles.heading}>
+                  <h1 className={styles.heading} style={{color:'white'}}>
                     Elevate your career <br /> with our{" "}
                     <span style={{ color: "rgba(107,87,255)" }}>AI resume</span>{" "}
                     builder
                   </h1>
-                  <p className={styles.paragraph}>
+                  <p className={styles.paragraph} style={{color:'white'}}>
                     Craft a polished resume swiftly using our AI-powered
                     platform and customizable templates. Impress potential
                     employers with a professionally designed document that
@@ -69,9 +74,10 @@ const Welcome = () => {
                     <button
                       className="btn   me-4 mb-3"
                       style={{
-                        backgroundColor: "rgb(35, 45, 63)",
+                        backgroundColor: "rgb(255, 179, 11)",
                         padding: ".6rem",
-                        color: "white",
+                        // color: "white",
+                        fontWeight:700
                       }}
                     >
                       {" "}
@@ -83,8 +89,10 @@ const Welcome = () => {
                     <button
                       className="btn mb-3 "
                       style={{
+                        backgroundColor: "rgb(255, 179, 11)",
                         border: "2px solid rgb(35, 45, 63) ",
                         padding: ".6rem",
+                        fontWeight:700
                       }}
                     >
                       {" "}
@@ -95,7 +103,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className={`col-md-5   ${styles.templateBox}`}>
+          <div className={`col-md-5   ${styles.templateBox}`} data-aos="fade-left">
             <Carousel
               showThumbs={false}
               autoPlay={true}
@@ -137,7 +145,7 @@ const Welcome = () => {
       </div>
    
       <div className={`container   ${styles.background3Back}`}>
-        <div className="row  " style={{ display: "flex" , justifyContent:'center'  }}>
+        <div className="row  " style={{ display: "flex" , justifyContent:'center'  }} data-aos="fade-up">
           <div
             className={`col-md-10 ${styles.background3} d-flex justify-content-center`}
           >
@@ -169,7 +177,7 @@ const Welcome = () => {
         style={{
           background: "linear-gradient(180deg, #F7F5FF 0%, #FFF 100%)",
           paddingTop: "4rem",
-        }}
+        }} data-aos="fade-right"
       >
         <h1
           className={styles.heading}
@@ -236,7 +244,7 @@ const Welcome = () => {
           <div className="col-md-5">
             <div className={`container   `}>
               <div className={`row ${styles.leftboxinner}`}>
-                <div className={`col-md-10 mt-4`}>
+                <div className={`col-md-10 mt-4`} data-aos="fade-left">
                   <h6 className={styles.paragraph}>Resume Templates</h6>
                   <h1 className={styles.heading}>
                     Select a template and personalize your{" "}
@@ -303,7 +311,7 @@ const Welcome = () => {
           </div>
           <div className="col-md-5">
             <div className={`container  ${styles.leftbox}`}>
-              <div className={`row ${styles.leftboxinner}`}>
+              <div className={`row ${styles.leftboxinner}`} data-aos="fade-right">
                 <div className={`col-md-10 mt-4 `}>
                   <h6 className={styles.paragraph}>Resume Examples</h6>
                   <h1 className={styles.heading}>
@@ -352,7 +360,7 @@ const Welcome = () => {
       <div className={`container   ${styles.background3Back}`}>
         <div className="row  " style={{ display: "flex" , justifyContent:'center'  }}>
           <div
-            className={`col-md-10 ${styles.background4} `}
+            className={`col-md-10 ${styles.background4} `} data-aos="flip-up"
           >
             <h1 className={styles.heading} style={{color:'rgb(35, 45, 63)' , textAlign:'center' }}>Your Gateway to Infinite Opportunities</h1>
             <p className={styles.paragraph} style={{color:'rgb(35, 45, 63)' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
@@ -733,7 +741,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
 
       
     </div>

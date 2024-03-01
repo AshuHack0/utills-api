@@ -6,9 +6,10 @@ import PreviewOptions from "./components/PreviewOptions/PreviewOptions";
 import DocumentMeta from "react-document-meta";
 import { useResume } from "./components/context/Resume";
 import ChooseTemplate from "./components/templates/ChooseTemplate/ChooseTemplate";
-import MyResponsiveNavbar from "./components/Navbar"
+
 import AiAll from "./AiAll";
-import Footer from "./components/Footer";
+import Footer from "../../pages/Footer";
+import MyResponsiveNavbar from "../../pages/Navbar";
 const ResumeBuilder = () => {
   const { selectedTemplate, printContainerRef, values } = useResume();
   const Build = selectedTemplate?.build;
@@ -20,7 +21,7 @@ const ResumeBuilder = () => {
   
   return (
     <DocumentMeta {...meta}> 
-    <MyResponsiveNavbar  />
+    <MyResponsiveNavbar />
       {/* For only print purposes */} 
       <div className={previewStyles.print_only_resume_page} id="print_content"> 
         <div
