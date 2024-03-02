@@ -13,9 +13,9 @@ import Accordion from "react-bootstrap/Accordion";
 import allTemp from "./ResumeBuilder/assets/images/allTemplate.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { useGoogleOneTapLogin } from '@react-oauth/google';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useGoogleOneTapLogin } from "@react-oauth/google";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
 function handleClick() {
@@ -24,20 +24,19 @@ function handleClick() {
 
 const Welcome = () => {
   useGoogleOneTapLogin({
-    onSuccess: credentialResponse => {
+    onSuccess: (credentialResponse) => {
       console.log(credentialResponse);
       console.log(credentialResponse.name);
     },
     onError: () => {
-      console.log('Login Failed');
+      console.log("Login Failed");
     },
   });
 
   return (
     <div>
-       <MyResponsiveNavbar />
+      <MyResponsiveNavbar />
       <div className={`container-fluid  ${styles.background}`}>
-     
         <div className="row  " style={{ display: "flex" }}>
           <div
             className="col-md-7 "
@@ -45,9 +44,8 @@ const Welcome = () => {
           >
             <div className={`container  ${styles.leftbox}`}>
               <div className={`row ${styles.leftboxinner}`} data-aos="zoom-in">
-                <div className={`col-md-10 `} >
-                  <h6 className={styles.paragraph} style={{color:'white'}}>
-                    
+                <div className={`col-md-10 `}>
+                  <h6 className={styles.paragraph} style={{ color: "white" }}>
                     MyFuse Resume Builder{" "}
                     <img
                       src="https://images.hitpaw.net/landing-pages/aiicon.svg"
@@ -55,12 +53,12 @@ const Welcome = () => {
                     />
                     <span className={`${styles.AIProwered}`}>AI Powered</span>
                   </h6>
-                  <h1 className={styles.heading} style={{color:'white'}}>
+                  <h1 className={styles.heading} style={{ color: "white" , fontSize:'2.5rem'}}>
                     Elevate your career <br /> with our{" "}
                     <span style={{ color: "rgba(107,87,255)" }}>AI resume</span>{" "}
                     builder
                   </h1>
-                  <p className={styles.paragraph} style={{color:'white'}}>
+                  <p className={styles.paragraph} style={{ color: "white" }}>
                     Craft a polished resume swiftly using our AI-powered
                     platform and customizable templates. Impress potential
                     employers with a professionally designed document that
@@ -77,7 +75,7 @@ const Welcome = () => {
                         backgroundColor: "rgb(255, 179, 11)",
                         padding: ".6rem",
                         // color: "white",
-                        fontWeight:700
+                        fontWeight: 700,
                       }}
                     >
                       {" "}
@@ -92,7 +90,7 @@ const Welcome = () => {
                         backgroundColor: "rgb(255, 179, 11)",
                         border: "2px solid rgb(35, 45, 63) ",
                         padding: ".6rem",
-                        fontWeight:700
+                        fontWeight: 700,
                       }}
                     >
                       {" "}
@@ -103,7 +101,10 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className={`col-md-5   ${styles.templateBox}`} data-aos="fade-left">
+          <div
+            className={`col-md-5   ${styles.templateBox}`}
+            data-aos="fade-left"
+          >
             <Carousel
               showThumbs={false}
               autoPlay={true}
@@ -143,32 +144,52 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-   
+
       <div className={`container   ${styles.background3Back}`}>
-        <div className="row  " style={{ display: "flex" , justifyContent:'center'  }} data-aos="fade-up">
+        <div
+          className="row  "
+          style={{ display: "flex", justifyContent: "center" }}
+          data-aos="fade-up"
+        >
           <div
             className={`col-md-10 ${styles.background3} d-flex justify-content-center`}
           >
-            <h1 className={styles.heading} style={{color:'white' , textAlign:'center'}}>This Resume Builder is build for Myfuse.In</h1>
-            <p className={styles.paragraph} style={{color:'white' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Discover a world of opportunities with internships, projects, and a gateway to your professional future.</p>
+            <h1
+              className={styles.heading}
+              style={{ color: "white", textAlign: "center" }}
+            >
+              This Resume Builder is build for Myfuse.In
+            </h1>
+            <p
+              className={styles.paragraph}
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "1rem",
+                marginBottom: "2rem",
+                textAlign: "center",
+              }}
+            >
+              Discover a world of opportunities with internships, projects, and
+              a gateway to your professional future.
+            </p>
             <NavLink to="https://myfuse.in/home">
-                    <button
-                      className="btn   me-4 mb-3"
-                      style={{
-                        backgroundColor: "#ffb30b",
-                        padding: ".6rem",
-                        color: "#2a182e",
-                        fontWeight:600,
-                        fontSize:"1rem"
-                      }}
-                    >
-                      {" "}
-                      Go To MyFuse.In
-                    </button>
-                  </NavLink>
-
+              <button
+                className="btn   me-4 mb-3"
+                style={{
+                  backgroundColor: "#ffb30b",
+                  padding: ".6rem",
+                  color: "#2a182e",
+                  fontWeight: 600,
+                  fontSize: "1rem",
+                }}
+              >
+                {" "}
+                Go To MyFuse.In
+              </button>
+            </NavLink>
           </div>
-          
         </div>
       </div>
 
@@ -177,7 +198,8 @@ const Welcome = () => {
         style={{
           background: "linear-gradient(180deg, #F7F5FF 0%, #FFF 100%)",
           paddingTop: "4rem",
-        }} data-aos="fade-right"
+        }}
+        data-aos="fade-right"
       >
         <h1
           className={styles.heading}
@@ -224,9 +246,8 @@ const Welcome = () => {
                       className="btn   me-4"
                       style={{
                         backgroundColor: "#ffb30b",
-                         fontWeight:'700',
+                        fontWeight: "700",
                         padding: ".7rem",
-                        
                       }}
                     >
                       {" "}
@@ -269,9 +290,8 @@ const Welcome = () => {
                       className="btn   me-4"
                       style={{
                         backgroundColor: "#ffb30b",
-                         fontWeight:'700',
+                        fontWeight: "700",
                         padding: ".6rem",
-                        
                       }}
                     >
                       {" "}
@@ -313,7 +333,10 @@ const Welcome = () => {
           </div>
           <div className="col-md-5">
             <div className={`container  ${styles.leftbox}`}>
-              <div className={`row ${styles.leftboxinner}`} data-aos="fade-right">
+              <div
+                className={`row ${styles.leftboxinner}`}
+                data-aos="fade-right"
+              >
                 <div className={`col-md-10 mt-4 `}>
                   <h6 className={styles.paragraph}>Resume Examples</h6>
                   <h1 className={styles.heading}>
@@ -344,7 +367,7 @@ const Welcome = () => {
                         backgroundColor: "#ffb30b",
 
                         padding: ".7rem",
-                       fontWeight:'700'
+                        fontWeight: "700",
                       }}
                     >
                       {" "}
@@ -358,34 +381,85 @@ const Welcome = () => {
         </div>
       </div>
 
-    
+      <div className={`container   ${styles.backgroundBacktest}`}>
+        <h1  className="text-center" style={{fontWeight:600 ,fontSize: '2rem' ,
+    lineHeight: '2.6rem',  marginBottom:'3rem'}}>What Student Say About Us</h1>
+        <div
+          className="row "
+          style={{ display: "flex", justifyContent: "center" ,  justifyContent:"space-around"    }}
+        >
+ 
+
+          <div
+            className={`col-md-3 col-11  ${styles.testonomial} `}
+            data-aos="flip-up"
+            
+          > 
+          asfasf
+          <i class="fa-solid fa-quote-left"></i>
+          </div>
+
+          <div
+            className={`col-md-3  col-11 ${styles.testonomial} `}
+            data-aos="flip-up"
+            
+          > 
+          asfasf
+          </div>
+
+          <div
+            className={`col-md-3  col-11  ${styles.testonomial} `}
+            data-aos="flip-up"
+            
+          > 
+          asfasfa
+          </div>
+        </div>
+      </div>
 
       <div className={`container   ${styles.background3Back}`}>
-        <div className="row  " style={{ display: "flex" , justifyContent:'center'  }}>
+        <div
+          className="row  "
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div
-            className={`col-md-10 ${styles.background4} `} data-aos="flip-up"
+            className={`col-md-10 ${styles.background4} `}
+            data-aos="flip-up"
           >
-            <h1 className={styles.heading} style={{  textAlign:'center' }}>Your Gateway to Infinite Opportunities</h1>
-            <p className={styles.paragraph} style={{ color:'white',  display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' , textAlign:'center' }}>Myfuse's comprehensive platform is designed to help you discover the right job for you..</p>
+            <h1 className={styles.heading} style={{ textAlign: "center" }}>
+              Your Gateway to Infinite Opportunities
+            </h1>
+            <p
+              className={styles.paragraph}
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "1rem",
+                marginBottom: "2rem",
+                textAlign: "center",
+              }}
+            >
+              Myfuse's comprehensive platform is designed to help you discover
+              the right job for you..
+            </p>
             <NavLink to="https://myfuse.in/home">
-                    <button
-                      className="btn   me-4 mb-3"
-                      style={{
-                        backgroundColor: "#ffb30b",
+              <button
+                className="btn   me-4 mb-3"
+                style={{
+                  backgroundColor: "#ffb30b",
 
-                        padding: ".6rem",
-                        
-                        fontWeight:'600',
-                        fontSize:"1rem"
-                      }}
-                    >
-                      {" "}
-                   Go To Myfuse.In
-                    </button>
-                  </NavLink>
+                  padding: ".6rem",
 
+                  fontWeight: "600",
+                  fontSize: "1rem",
+                }}
+              >
+                {" "}
+                Go To Myfuse.In
+              </button>
+            </NavLink>
           </div>
-          
         </div>
       </div>
 
@@ -395,12 +469,19 @@ const Welcome = () => {
             <div className={`container   `}>
               <div className={`row ${styles.leftboxinner}`}>
                 <div className={`col-md-10 mt-4`}>
-                 
                   <h1 className={styles.heading}>
-                  Are you ready to be part of a   <span style={{ color: "rgba(107,87,255)" }}> MyFuse.In {" "}</span>?
+                    Are you ready to be part of a{" "}
+                    <span style={{ color: "rgba(107,87,255)" }}>
+                      {" "}
+                      MyFuse.In{" "}
+                    </span>
+                    ?
                   </h1>
                   <p className={styles.paragraph}>
-                  Your ultimate placement portal. Connect with opportunities, share experiences, and thrive in your career journey. Empowering professionals to find their perfect fit. Join now and elevate your career
+                    Your ultimate placement portal. Connect with opportunities,
+                    share experiences, and thrive in your career journey.
+                    Empowering professionals to find their perfect fit. Join now
+                    and elevate your career
                   </p>
                 </div>
                 <div className="col-md-10">
@@ -411,11 +492,11 @@ const Welcome = () => {
                         backgroundColor: "#ffb30b",
                         padding: ".6rem",
                         color: "rgb(35, 45, 63)",
-                        fontWeight:600
+                        fontWeight: 600,
                       }}
                     >
                       {" "}
-                     Explore MyFuse
+                      Explore MyFuse
                     </button>
                   </NavLink>
                 </div>
@@ -715,40 +796,51 @@ const Welcome = () => {
         </div>
       </div>
 
-     
-
       <div className={`container-fluid   ${styles.background4Back}`}>
-        <div className="row  " style={{ display: "flex" , justifyContent:'center'  }}>
-          <div
-            className={`col-md-12 ${styles.background5} `}
-          >
-            <h1 className={styles.heading} style={{color:'rgb(35, 45, 63)' , textAlign:'center'}}>Start building today. It's Free!</h1>
-            <p className={styles.paragraph} style={{color:'rgb(35, 45, 63)' , display:'flex' , justifyContent:'center'  ,  marginTop:'1rem' , marginBottom:'2rem' }}>Build and Download your first Resume in under 30 minutes.</p>
+        <div
+          className="row  "
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div className={`col-md-12 ${styles.background5} `}>
+            <h1
+              className={styles.heading}
+              style={{ color: "rgb(35, 45, 63)", textAlign: "center" }}
+            >
+              Start building today. It's Free!
+            </h1>
+            <p
+              className={styles.paragraph}
+              style={{
+                color: "rgb(35, 45, 63)",
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "1rem",
+                marginBottom: "2rem",
+              }}
+            >
+              Build and Download your first Resume in under 30 minutes.
+            </p>
             <NavLink to="/welcome">
-                    <button
-                      className="btn   me-4 mb-3"
-                      style={{
-                        backgroundColor: "#ffb30b",
+              <button
+                className="btn   me-4 mb-3"
+                style={{
+                  backgroundColor: "#ffb30b",
 
-                        padding: ".6rem",
-               
-                        fontWeight:600,
-                        fontSize:"1rem"
-                      }}
-                    >
-                      {" "}
-                     Craft My Resume
-                    </button>
-                  </NavLink>
+                  padding: ".6rem",
 
+                  fontWeight: 600,
+                  fontSize: "1rem",
+                }}
+              >
+                {" "}
+                Craft My Resume
+              </button>
+            </NavLink>
           </div>
-          
         </div>
       </div>
 
       <Footer />
-
-      
     </div>
   );
 };

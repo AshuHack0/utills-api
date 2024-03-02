@@ -93,10 +93,12 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
+    font-size: 2rem;
     /* font-family: 'Mukta', sans-serif; */
 }
 .paragraph {
     /* font-family: 'Mukta', sans-serif; */
+    
     color:#4f4851
 }
 .section2image {
@@ -145,6 +147,12 @@
     background-image: url(https://assets.softr-files.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/86dd6b2d-6773-499e-99a1-d6c28e9e5338.svg);
    margin-bottom: 3rem;
    margin-top: 3rem;
+}
+.backgroundBacktest {
+    background-image: url(https://static.remove.bg/pattern-rbg.svg);
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+    padding: 4rem;
 }
 .background4Back {
     background-image: url(https://assets.softr-files.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/c17e1305-a4a8-45b4-8d9c-216bdde36fba.svg);
@@ -199,4 +207,18 @@
     
     flex-direction: column;
     /* padding: 3rem; */
+}
+
+.testonomial {
+    padding: 2rem;
+    background: #f7f7f7;
+    border-radius: 3px;
+    margin: 1rem;
+    border: 2px solid rgb(237, 240, 242);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+}
+
+.testonomial:hover {
+    /* background-color: lightgray; Change background color on hover */
+    transform: scale(1.05); /* Scale the element on hover */
 }
