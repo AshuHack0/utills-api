@@ -13,7 +13,7 @@ const SingUp = () => {
 
   const [email , setEmail] = useState();
   const [firstName , setFirstName] = useState();
-  const [lastname , setlastName] = useState();
+  const [lastName , setlastName] = useState();
   const [phone , setPhone] = useState();
   const [password , setpassword] =useState();  
   const [cpassword , setcpassword] =useState();  
@@ -31,27 +31,28 @@ const SingUp = () => {
     e.preventDefault();
       try {
        
-        const res = await axios.post(`https://myfuseback.vercel.app/api/auth/login` ,{email,password}) ; 
-         if(res.data.success)
-    {
-            toast.success(res.data.message);
+        const res = await axios.post(`https://myfuseback.vercel.app/api/auth/register` ,{email,password ,firstName ,lastName,phone}) ; 
+        console.log(res);
+    //     if(res.data.success)
+    // {
+    //         toast.success(res.data.message);
            
-            setAuth({
-              ...auth , 
-              user:res.data.user,
-              token:res.data.token
-            }); 
+    //         setAuth({
+    //           ...auth , 
+    //           user:res.data.user,
+    //           token:res.data.token
+    //         }); 
              
-            localStorage.setItem('auth',JSON.stringify(res.data))
-            Navigate( '/welcome');
+    //         localStorage.setItem('auth',JSON.stringify(res.data))
+    //         Navigate( '/welcome');
            
 
-    }
-    else
-    {
+    // }
+    // else
+    // {
     
-      toast.error("invalid login id and password ")
-    }
+    //   toast.error("invalid login id and password ")
+    // }
           
       } catch (error) {
         console.log(error); 
@@ -92,10 +93,10 @@ const SingUp = () => {
                              
                              <div className='d-flex'>
                                     <div className="mb-3 me-2">
-                                        <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Firstname " value={firstName}  onChange={(e)=>{setFirstName(e.target.value)}}  />
+                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Firstname " value={firstName}  onChange={(e)=>{setFirstName(e.target.value)}}  />
                                     </div>
                                     <div className="mb-3">
-                                        <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="lastname " value={lastname}  onChange={(e)=>{setlastName(e.target.value)}}  />
+                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="lastname " value={lastName}  onChange={(e)=>{setlastName(e.target.value)}}  />
                                     </div>
                              </div>
 
