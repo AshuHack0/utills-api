@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
-import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
 import styles  from './assets/Signup.module.css'
 import {jwtDecode} from 'jwt-decode'
@@ -20,10 +19,6 @@ const SingUp = () => {
 
 
    const Navigate = useNavigate(); 
-  //  const location = useLocation();
-    const {auth , setAuth} = useAuth();
-    // console.log(useAuth);
-
     const handleNavigate = () => {
         Navigate( '/login');
       };
@@ -32,27 +27,16 @@ const SingUp = () => {
       try {
        
         const res = await axios.post(`https://myfuseback.vercel.app/api/auth/register` ,{email,password ,firstName ,lastName,phone}) ; 
-        console.log(res);
-    //     if(res.data.success)
-    // {
-    //         toast.success(res.data.message);
-           
-    //         setAuth({
-    //           ...auth , 
-    //           user:res.data.user,
-    //           token:res.data.token
-    //         }); 
-             
-    //         localStorage.setItem('auth',JSON.stringify(res.data))
-    //         Navigate( '/welcome');
-           
-
-    // }
-    // else
-    // {
+        if(res.data.success)
+    {
+            toast.success(res.data.message);
+            Navigate( `/verify/email=${email}`);
+    }
+    else
+    {
     
-    //   toast.error("invalid login id and password ")
-    // }
+      toast.error(res.data.message)
+    }
           
       } catch (error) {
         console.log(error); 

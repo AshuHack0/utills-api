@@ -8,6 +8,7 @@ import PrivateRoute from "./Routes/PrivateRoute";
 import SingUp from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Verify from "./components/pages/Verify_otp";
+import { faHiking } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
  
@@ -24,7 +25,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SingUp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/verify" element={<Verify />} />
+      <Route path="/verify/:email" element={<Verify />} />
 
     </Routes>
  
