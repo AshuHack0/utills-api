@@ -9,6 +9,8 @@ import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
 import logos from './assets/logo.png'
+import HashLoader from "react-spinners/HashLoader";
+
 const Login = () => {
 
   const [email , setEmail] = useState();
@@ -17,6 +19,8 @@ const Login = () => {
   //  const location = useLocation();
     const {auth , setAuth} = useAuth();
     // console.log(useAuth);
+  let [loading, setLoading] = useState(false);
+
    
 
     const handleNavigateForgot = () => {
@@ -28,8 +32,10 @@ const Login = () => {
    const handleSubmit = async(e) =>{
     e.preventDefault();
       try {
-       
+        setLoading(true);
         const res = await axios.post(`https://myfuseback.vercel.app/api/auth/login` ,{email,password}) ; 
+        setLoading(false);
+
          if(res.data.success)
     {
             toast.success(res.data.message);
@@ -47,7 +53,7 @@ const Login = () => {
     }
     else
     {
-    
+      setLoading(false);
       toast.error("invalid login id and password ")
     }
           
@@ -98,12 +104,26 @@ const Login = () => {
 
                            <form onSubmit={handleSubmit} >
                             <div className="mb-3">
-                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}}  />
+                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}} required  />
                             </div>
                             <div className="mb-3">
-                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  />
+                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  required />
                             </div>
+                             
+                             {loading ? 
+                             (
+                              <div className='text-center d-flex justify-content-center'>  <div className={` d-flex  justify-content-center ${styles.btn}`}>
+                              <HashLoader color="#000000" size={25} />
+                               </div></div>
+                             )
+                             : 
+                             
+                             (
                              <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign In</button></div>
+
+                             )
+                             }
+
                              <p className='text-center mt-3 ' style={{fontWeight:'bold' , color:"#4D85D5" , cursor:'pointer'}} onClick={handleNavigateForgot}>Forgot Password ?</p>
                               
                             

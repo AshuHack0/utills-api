@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState , CSSProperties  } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import axios from 'axios'; 
@@ -8,6 +8,12 @@ import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
 import Form from 'react-bootstrap/Form';
+import HashLoader from "react-spinners/HashLoader";
+
+
+ 
+
+
 const SingUp = () => {
 
   const [email , setEmail] = useState();
@@ -17,6 +23,7 @@ const SingUp = () => {
   const [password , setpassword] =useState();  
   const [cpassword , setcpassword] =useState();  
 
+  let [loading, setLoading] = useState(false);
 
    const Navigate = useNavigate(); 
     const handleNavigate = () => {
@@ -24,17 +31,20 @@ const SingUp = () => {
       };
    const handleSubmit = async(e) =>{
     e.preventDefault();
+    
       try {
-       
+        setLoading(true);
         const res = await axios.post(`https://myfuseback.vercel.app/api/auth/register` ,{email,password ,firstName ,lastName,phone}) ; 
+        setLoading(false);
         if(res.data.success)
     {
             toast.success(res.data.message);
+            
             Navigate( `/verify/email=${email}`);
     }
     else
     {
-    
+      setLoading(false);
       toast.error(res.data.message)
     }
           
@@ -77,31 +87,45 @@ const SingUp = () => {
                              
                              <div className='d-flex'>
                                     <div className="mb-3 me-2">
-                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Firstname " value={firstName}  onChange={(e)=>{setFirstName(e.target.value)}}  />
+                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Firstname " value={firstName}  onChange={(e)=>{setFirstName(e.target.value)}} required  />
                                     </div>
                                     <div className="mb-3">
-                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="lastname " value={lastName}  onChange={(e)=>{setlastName(e.target.value)}}  />
+                                        <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="lastname " value={lastName}  onChange={(e)=>{setlastName(e.target.value)}}  required/>
                                     </div>
                              </div>
 
                             <div className="mb-3">
-                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}}  />
+                              <input  type="email" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder="Email " value={email}  onChange={(e)=>{setEmail(e.target.value)}} required />
                             </div>
                             <div className="mb-3">
-                              <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder= "Phone No" value={phone}  onChange={(e)=>{setPhone(e.target.value)}}  />
+                              <input  type="text" className={`form-control shadow-none ${styles.inputstyle}`} id="exampleInputemail"    placeholder= "Phone No" value={phone}  onChange={(e)=>{setPhone(e.target.value)}}  required/>
                             </div>
                             <div className="mb-3">
-                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  />
+                              <input type="password" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Password "  value={password} onChange={(e)=>{setpassword(e.target.value)}}  required />
                             </div>
                             <div className="mb-3">
-                              <input type="cpassword" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Confrim Password "  value={cpassword} onChange={(e)=>{setcpassword(e.target.value)}}  />
+                              <input type="cpassword" className="form-control shadow-none input-style" id="exampleInputPassword1"     placeholder="Confrim Password "  value={cpassword} onChange={(e)=>{setcpassword(e.target.value)}}  required/>
                             </div>
                             <div className='d-flex'>
-                            <Form.Check aria-label="option 1" /> <span className='ms-2'>I accept the
+                            <Form.Check aria-label="option 1"  required /> <span className='ms-2'>I accept the
                               terms and conditions</span>
                             </div>
-                           
+                            
+                             {loading ? 
+                             (
+                              <div className='text-center d-flex justify-content-center'>  <div className={` d-flex  justify-content-center ${styles.btn}`}>
+                              <HashLoader color="#000000" size={25} />
+                               </div></div>
+                             )
+                             : 
+                             
+                             (
                              <div className='text-center '>  <button type="submit" className={`${styles.btn}`}>Sign Up</button></div>
+
+                             )
+                             }
+                             
+                            
                             <br/>
                             <p className='text-center'>or</p>
                              <div className='d-flex justify-content-center'>
