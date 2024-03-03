@@ -136,14 +136,15 @@ const Login = () => {
                  </div>
             </div>
             
-            <div className='col-12 col-md-6' > 
+            <div className={`col-12 col-md-6 ${styles.hideOnMobile} `} > 
             <div className={`${styles.rectangle}`}></div>
             <div className={`${styles.square}`}></div>
             <div className={`${styles.circle}`}></div>
                     <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
                       <div className={`col-11 col-md-7 ${styles.reviewtext}`}  >
-                      <img src="" /> 
-                      "Your career deserves the best. Build a standout resume effortlessly with MyFuse.in – where quality meets simplicity." <br/> - CEO Myfuse
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" style={{width:'4rem'}} /> 
+                      "Your career deserves the best. Build a standout resume effortlessly with MyFuse.in – where quality meets simplicity." <br/>
+                       <span style={{fontSize:'13px'}}> - CEO Myfuse </span> 
                       </div>
                   </div>
                  

@@ -71,6 +71,10 @@
     font-weight: 500;
     line-height: 32px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .rectangle {
@@ -103,3 +107,10 @@
     margin-left: 55px;
     background-image: url(https://studio.softr.io/media/red-circle-ZFE766MF.svg);
 }
+
+@media only screen and (max-width: 600px) {
+    .hideOnMobile {
+        display: none;
+    }
+}
+

@@ -74,7 +74,7 @@ const SingUp = () => {
                  <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
                     <div className='col-11 col-md-7 '  >
                           <div>
-                           
+                          
                            <h1 className={` text-center ${styles.logo}`}> Sign up for free and
                                start building in minutes</h1>
                             
@@ -149,13 +149,17 @@ const SingUp = () => {
                  </div>
             </div>
             
-            <div className='col-12 col-md-6' > 
+            <div className={`col-12 col-md-6 ${styles.hideOnMobile} `} > 
             <div className={`${styles.rectangle}`}></div>
             <div className={`${styles.square}`}></div>
             <div className={`${styles.circle}`}></div>
                     <div className='row d-flex justify-content-center align-items-center' style={{height:'100vh'}}> 
                       <div className={`col-11 col-md-7 ${styles.reviewtext}`}  >
-                      " Embark on a journey towards professional success with MyFuse.in, where crafting an exceptional resume is as simple as a few clicks." <br/> - CEO Myfuse
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" style={{width:'4rem'}} /> 
+
+                      " Embark on a journey towards professional success with MyFuse.in, where crafting an exceptional resume is as simple as a few clicks." <br/>  
+                      <span style={{fontSize:'13px'}}> - CEO Myfuse </span> 
+                    
                       </div>
                   </div>
                  

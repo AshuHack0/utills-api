@@ -89,3 +89,9 @@
     color: #4D85D5;;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .hideOnMobile {
+        display: none;
+    }
+}

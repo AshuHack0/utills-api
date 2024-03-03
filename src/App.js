@@ -9,6 +9,7 @@ import SingUp from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Verify from "./components/pages/Verify_otp";
 import { faHiking } from "@fortawesome/free-solid-svg-icons";
+import PdfToJsonConverter from "./components/pages/Pdf";
 
 function App() {
  
@@ -26,6 +27,8 @@ function App() {
       <Route path="/signup" element={<SingUp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/verify/:email" element={<Verify />} />
+      <Route path="/pdf" element={<PdfToJsonConverter />} />
+
 
     </Routes>
  
