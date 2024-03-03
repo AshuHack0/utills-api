@@ -417,7 +417,7 @@ const Welcome = () => {
          <img src={doubleQuote}  style={{width:'3rem'}} />
 
              <div className="mt-4"  style={{fontWeight:600}} >
-         "eamless experience, standout resumes. MyFuse Resume Builder offers a streamlined process with customizable options, ideal for creating professional resumes with ease. "
+         "seamless experience, standout resumes. MyFuse Resume Builder offers a streamlined process with customizable options, ideal for creating professional resumes with ease. "
              </div>
              <div  className="d-flex justify-content-around align-items-center " style={{marginTop:'3rem'}}>
             <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVxRscwjvmDGbLvkvNfPGmp1a-RuGXoLkaT1cJVz2xrTfeZpM2bD_KmVzjZ_uXrqaLSI&usqp=CAU" style={{width:'5rem' , height:'5rem' , borderRadius:'4rem'}} />
