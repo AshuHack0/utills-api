@@ -15,7 +15,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css"; // You can also use <link> for styles 
+import doubleQuote from './assets/double.png'
 // ..
 AOS.init();
 function handleClick() {
@@ -385,21 +386,27 @@ const Welcome = () => {
       </div>
 
       <div className={`container   ${styles.backgroundBacktest}`}>
-        <h1  className="text-center" style={{fontWeight:600 ,fontSize: '2rem' ,
-    lineHeight: '2.6rem',  marginBottom:'3rem'}}>What Student Say About Us</h1>
+        <h1  className={` text-center ${styles.heading}`} style={{fontWeight:600 ,fontSize: '2rem' ,
+    lineHeight: '2.6rem',  marginBottom:'3rem' , textTransform:'capitalize'}}>What Student Say About Us</h1>
         <div
           className="row "
           style={{ display: "flex", justifyContent: "center" ,  justifyContent:"space-around"    }}
         >
- 
-
           <div
             className={`col-md-3 col-11  ${styles.testonomial} `}
             data-aos="flip-up"
             
           > 
-          asfasf
-          <i class="fa-solid fa-quote-left"></i>
+         <img src={doubleQuote}  style={{width:'3rem'}} />
+        <div className="mt-4"  style={{fontWeight:600}}>
+            "Easy-to-use and effective. MyFuse Resume Builder streamlines resume creation, offering diverse templates and helpful features for professional-looking resumes in minutes."
+        </div>
+          
+          <div  className="d-flex justify-content-around align-items-center " style={{marginTop:'3rem'}}>
+            <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIjjM4p0_TtAtEGX9RFnsPk5yBhnbSbEqpV5Y3Bs_uPNRGLrNp_ZgU1cjVh1M4YFFSU7s&usqp=CAU" style={{width:'5rem' , height:'5rem' , borderRadius:'4rem'}} />
+            <span  style={{fontWeight:600}} >Ishika Choudhary</span>
+          </div>
+
           </div>
 
           <div
@@ -407,7 +414,15 @@ const Welcome = () => {
             data-aos="flip-up"
             
           > 
-          asfasf
+         <img src={doubleQuote}  style={{width:'3rem'}} />
+
+             <div className="mt-4"  style={{fontWeight:600}} >
+         "eamless experience, standout resumes. MyFuse Resume Builder offers a streamlined process with customizable options, ideal for creating professional resumes with ease. "
+             </div>
+             <div  className="d-flex justify-content-around align-items-center " style={{marginTop:'3rem'}}>
+            <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVxRscwjvmDGbLvkvNfPGmp1a-RuGXoLkaT1cJVz2xrTfeZpM2bD_KmVzjZ_uXrqaLSI&usqp=CAU" style={{width:'5rem' , height:'5rem' , borderRadius:'4rem'}} />
+            <span  style={{fontWeight:600}} >Aadhya Rajput</span>
+          </div>
           </div>
 
           <div
@@ -415,7 +430,15 @@ const Welcome = () => {
             data-aos="flip-up"
             
           > 
-          asfasfa
+         <img src={doubleQuote}  style={{width:'3rem'}} />
+          <div className="mt-4"  style={{fontWeight:600}}>
+
+            "Effortless and polished results. MyFuse Resume Builder offers a user-friendly interface with diverse templates, perfect for crafting professional resumes quickly"
+          </div>
+          <div  className="d-flex justify-content-around align-items-center " style={{marginTop:'3rem'}}>
+            <img   src="https://userphotos2.teacheron.com/1641770-35898.jpg" style={{width:'5rem' , height:'5rem' , borderRadius:'4rem'}} />
+            <span  style={{fontWeight:600}} >Himanshu Mishra</span>
+          </div>
           </div>
         </div>
       </div>

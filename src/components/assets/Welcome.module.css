@@ -150,9 +150,14 @@
 }
 .backgroundBacktest {
     background-image: url(https://static.remove.bg/pattern-rbg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-bottom: 6rem;
     margin-top: 6rem;
-    padding: 4rem;
+    /* padding: 4rem; */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 .background4Back {
     background-image: url(https://assets.softr-files.com/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/c17e1305-a4a8-45b4-8d9c-216bdde36fba.svg);
@@ -213,9 +218,11 @@
     padding: 2rem;
     background: #f7f7f7;
     border-radius: 3px;
-    margin: 1rem;
+    /* margin: 1rem; */
+    margin-bottom: 1rem;
     border: 2px solid rgb(237, 240, 242);
     transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+    border-radius: 8px;
 }
 
 .testonomial:hover {
