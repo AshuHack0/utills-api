@@ -58,6 +58,7 @@ const Login = () => {
     }
           
       } catch (error) {
+        setLoading(false);
         console.log(error); 
         toast.error("Please Enter Correct User Id and password")
       }
