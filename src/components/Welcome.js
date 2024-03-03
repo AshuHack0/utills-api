@@ -330,7 +330,7 @@ const Welcome = () => {
               // src={allTemp}
 
               className={`img-fluid   `}
-              style={{width:'85%'}}
+              style={{width:'85%' , borderRadius:'16px'}}
               alt=""
             />
           </div>
