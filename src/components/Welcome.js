@@ -326,8 +326,11 @@ const Welcome = () => {
             className={`col-md-7  d-flex  justify-content-center align-items-center `}
           >
             <img
-              src={allTemp}
-              className={`img-fluid ${styles.previewImage} `}
+              src="https://static-cse.canva.com/blob/566484/modernresumes.jpg"
+              // src={allTemp}
+
+              className={`img-fluid   `}
+              style={{width:'85%'}}
               alt=""
             />
           </div>
