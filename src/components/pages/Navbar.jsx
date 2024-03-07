@@ -24,7 +24,7 @@ function MyResponsiveNavbar() {
 
   return (
     <Navbar   expand="lg" variant="light">
-      <Container  >
+      <Container>
         <Navbar.Brand href="https://myfuse.in/home" >
           <h1 style={{ fontSize: '25px', fontWeight: '700', letterSpacing: '0.8px' , color:'black' }}>
             MyFuse<span style={{ color: '#f96f59' }}>.</span>In
