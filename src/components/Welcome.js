@@ -23,15 +23,9 @@ function handleClick() {
 }
 
 const Welcome = () => {
-  useGoogleOneTapLogin({
-    onSuccess: (credentialResponse) => {
-      console.log(credentialResponse);
-      console.log(credentialResponse.name);
-    },
-    onError: () => {
-      console.log("Login Failed");
-    },
-  });
+
+   
+   
 
   return (
     <div>
