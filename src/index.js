@@ -14,7 +14,7 @@ root.render(
     <HashRouter>
     <Toaster />
     <AuthProvider>
-      <GoogleOAuthProvider clientId="490977590312-bh47cbdd4doi3jt3fq38g9esior1v3f9.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId="357146799127-ffdktnts01tqbj4johpc2pqr98mn27tb.apps.googleusercontent.com">
       <App />
       </GoogleOAuthProvider>
       </AuthProvider>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
@@ -8,7 +8,6 @@ import styles  from './assets/Login.module.css'
 import {jwtDecode} from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from '@react-oauth/google';
-import logos from './assets/logo.png'
 import HashLoader from "react-spinners/HashLoader";
 
 const Login = () => {
