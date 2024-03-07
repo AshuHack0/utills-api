@@ -6,8 +6,7 @@ import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import axios from 'axios'; 
 import styles  from './assets/Login.module.css'
 import {jwtDecode} from 'jwt-decode'
-import { GoogleLogin } from '@react-oauth/google';
-import { useGoogleOneTapLogin } from '@react-oauth/google';
+import { GoogleLogin ,useGoogleOneTapLogin } from '@react-oauth/google';
 import HashLoader from "react-spinners/HashLoader";
 
 const Login = () => {
