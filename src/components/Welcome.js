@@ -16,6 +16,7 @@ import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
 import "aos/dist/aos.css";   
 import doubleQuote from './assets/double.png'
+import HiringWithUs from "./components/HiringWithUs";
 // ..
 AOS.init();
 function handleClick() {
@@ -146,6 +147,10 @@ const Welcome = () => {
           </div>
         </div>
       </div>
+
+     
+            <HiringWithUs/>
+         
 
       <div className={`container   ${styles.background3Back}`}>
         <div
