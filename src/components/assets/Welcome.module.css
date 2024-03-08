@@ -231,14 +231,17 @@
 }
 
 .box {
-    width: 146px;
-    height: 55px;
-    margin: 0 20px 0px 0;
+    width: 143px;
+      height: 74px;
+      margin: 0 24px 0 0;
+      max-width: 100px;
+      min-width: 143px;
+      border-radius: 23px;
     display: flex;
     background: white;
     box-shadow: 0px 5px 20px rgba(7, 78, 176, 0.12);
     align-items: center;
-    border-radius: 19px;
+    
     justify-content: center;
   }
   
@@ -255,17 +258,21 @@
   
   .animatedBox {
     /* animation: slideLeft 2s ease infinite alternate; Change duration and timing function as needed */
-    animation: moveLeftToRight 10s linear infinite;
+    animation: moveLeftToRight 5s linear infinite;
     
   }
 
   @keyframes moveLeftToRight {
-    0%, 100% {
-       transform: translateX(-150%);
+    0% {
+        /* transform: translateX(0%); */
+        /* background-color: red; */
       }
-      50% {
-          transform: translateX(0%);
+      100% {
+        /* transform: translateX(100%); */
       }
           }
   
+          .animatedBoxMain{
+            /* animation: moveLeftToRight 10s linear infinite; */
+          }
  
