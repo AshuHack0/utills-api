@@ -7,6 +7,7 @@ import template from "./ResumeBuilder/assets/images/ashu.png";
 import template2 from "./ResumeBuilder/assets/images/ashu2.png";
 import template3 from "./ResumeBuilder/assets/images/IITN.png";
 import template4 from "./ResumeBuilder/assets/images/IIT.png";
+import template5 from "./ResumeBuilder/assets/images/IITA.png"
 import { NavLink } from "react-router-dom";
 import PrevImage from "./ResumeBuilder/assets/images/preview.png";
 import Accordion from "react-bootstrap/Accordion";
@@ -126,6 +127,13 @@ const Welcome = () => {
               <div>
                 <img
                   src={template2}
+                  className={`img-fluid ${styles.templateImage}`}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src={template5}
                   className={`img-fluid ${styles.templateImage}`}
                   alt=""
                 />
