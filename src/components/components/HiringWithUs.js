@@ -9,7 +9,7 @@ const HiringWithUs = () => {
   return (
     <div className={`container `}>
       <div className="row" style={{ display: 'flex', justifyContent: 'center' , marginTop:'4rem' }} data-aos="fade-up">
-        <h1 className={`text-align-center ${styles.heading} mt-4`} style={{textAlign:'center'}}>Companies Hiring with us :</h1>
+        {/* <h1 className={`text-align-center ${styles.heading} mt-4`} style={{textAlign:'center'}}>Companies Hiring with us :</h1> */}
         <InfiniteScroll/>
         {/* <div className={`col-md-10 d-flex  ${styles.animatedBoxMain}`} style={{overflow:'hidden' , padding:'2rem'}}>
           <span className={` ${styles.box} ${styles.animatedBox}`}>

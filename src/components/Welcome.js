@@ -17,6 +17,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";   
 import doubleQuote from './assets/double.png'
 import HiringWithUs from "./components/HiringWithUs";
+import RecentScroll from "./components/RecentScroll";
 // ..
 AOS.init();
 function handleClick() {
@@ -150,7 +151,7 @@ const Welcome = () => {
 
      
             <HiringWithUs/>
-         
+            {/* <RecentScroll/> */}
 
       <div className={`container   ${styles.background3Back}`}>
         <div

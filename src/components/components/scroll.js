@@ -21,16 +21,27 @@ const InfiniteScroll = () => {
 
  
 
+// const infiniteScroll = () => {
+//     const wrapper = photoWrapperRef.current;
+//     if (wrapper.scrollLeft >= wrapper.scrollWidth - wrapper.offsetWidth) {
+//       wrapper.scrollLeft = 0;
+//     } else {
+//       wrapper.scrollLeft += 0.5; // Adjust the value to control the scrolling speed
+//     }
+//     requestAnimationFrame(infiniteScroll);
+//   };
 const infiniteScroll = () => {
-    const wrapper = photoWrapperRef.current;
+  const wrapper = photoWrapperRef.current;
+  if (wrapper) {
     if (wrapper.scrollLeft >= wrapper.scrollWidth - wrapper.offsetWidth) {
       wrapper.scrollLeft = 0;
     } else {
       wrapper.scrollLeft += 0.5; // Adjust the value to control the scrolling speed
     }
     requestAnimationFrame(infiniteScroll);
-  };
-  
+  }
+};
+
 
     window.addEventListener('scroll', handleScroll);
     infiniteScroll();
