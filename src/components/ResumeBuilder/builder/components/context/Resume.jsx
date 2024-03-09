@@ -7,7 +7,7 @@ import IITBResumeBuild from "../templates/IITB/IITBResumeBuild";
 import IITDResumeBuild from "../templates/IITD/IITDResumeBuild";
 import IITKResumeBuild from "../templates/IITK/IITKResumeBuild";
 import IITNResumeBuild from "../templates/IITN/IITNResumeBuild";
-
+import IITAResumeBuild from "../templates/IITA/IITAResumeBuild";
 
 //Resume
 import ISMResume from "../templates/ISM/ISMResume";
@@ -15,6 +15,7 @@ import IITBResume from "../templates/IITB/IITBResume";
 import IITDResume from "../templates/IITD/IITDResume";
 import IITKResume from "../templates/IITK/IITKResume";
 import IITNResume from "../templates/IITN/IITNResume";
+import IITAResume from "../templates/IITA/IITAResume";
 
 // Preview Image
 import ISMPreviewImage from "../../../assets/images/ashu.png";
@@ -22,6 +23,7 @@ import IITBPreviewImage from "../../../assets/images/temp2.png";
 import IITDPreviewImage from "../../../assets/images/IIT.png";
 import IITKPreviewImage from "../../../assets/images/IITK.png";
 import IITNPreviewImage from "../../../assets/images/IITN.png";
+import IITAPreviewImage from "../../../assets/images/IITA.png"
 
 
 const ResumeContext = React.createContext();
@@ -144,13 +146,13 @@ const ResumeProvider = ({ children }) => {
       page_margins: "0.5in",
       preview: IITDPreviewImage,
     },
-    iitk: {
+    iita: {
       name: "Template 4",
-      key: "iitk",
-      build: IITKResumeBuild,
-      resume: IITKResume,
+      key: "iita",
+      build: IITAResumeBuild,
+      resume: IITAResume,
       page_margins: "0.5in",
-      preview: IITKPreviewImage,
+      preview: IITAPreviewImage,
     },
     iitn: {
       name: "Template 5",
@@ -159,6 +161,14 @@ const ResumeProvider = ({ children }) => {
       resume: IITNResume,
       page_margins: "0.5in",
       preview: IITNPreviewImage,
+    },
+    iitk: {
+      name: "Template 6",
+      key: "iitk",
+      build: IITKResumeBuild,
+      resume: IITKResume,
+      page_margins: "0.5in",
+      preview: IITKPreviewImage,
     },
   };
 

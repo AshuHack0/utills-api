@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./ChooseTemplate.module.css";
 import { useResume } from "../../context/Resume";
-import bot from "../../../../assets/images/bot.gif";
 import { NavLink } from "react-bootstrap";
 
 const ChooseTemplate = () => {
