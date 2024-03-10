@@ -13,7 +13,7 @@ import PrevImage from "./ResumeBuilder/assets/images/preview.png";
 import Accordion from "react-bootstrap/Accordion";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { useGoogleOneTapLogin } from "@react-oauth/google";
+// import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
 import "aos/dist/aos.css";   
 import doubleQuote from './assets/double.png'

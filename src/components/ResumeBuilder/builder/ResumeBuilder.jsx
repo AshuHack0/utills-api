@@ -48,7 +48,6 @@ const ResumeBuilder = () => {
           </div>
         </div>
       ) : (
-
         <ChooseTemplate />
       )}
         <Footer/>
