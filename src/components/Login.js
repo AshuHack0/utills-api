@@ -76,6 +76,23 @@ const Login = () => {
 
       console.log('Backend Response:', response.data);
       // Handle further actions after successful login, such as updating UI, storing tokens, etc.
+
+      if(response.data.success)
+    {
+            toast.success(res.data.message);
+           
+            setAuth({
+              ...auth , 
+              user:res.data.user,
+              token:res.data.token
+            }); 
+             
+            localStorage.setItem('auth',JSON.stringify(res.data))
+            Navigate( '/welcome');
+           
+
+    }
+
     } catch (error) {
       console.error('Error:', error);
       // Handle error scenarios, such as displaying error messages to the user
