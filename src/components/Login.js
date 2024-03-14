@@ -63,11 +63,36 @@ const Login = () => {
   }
 
 
+  const responseGoogleSuccess = async (credentialResponse) => {
+    try {
+      console.log('Google Auth Response:', credentialResponse);
+
+      // Decode the JWT token
+      const decode = jwtDecode(credentialResponse.tokenId);
+      console.log('Decoded Token:', decode);
+
+      // Make a POST request to your backend API
+      const response = await axios.post('https://myfuseback.vercel.app/api/auth/loginWithGoogle', { decode });
+
+      console.log('Backend Response:', response.data);
+      // Handle further actions after successful login, such as updating UI, storing tokens, etc.
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error scenarios, such as displaying error messages to the user
+    }
+  };
+
+  const responseGoogleFailure = (error) => {
+    console.error('Google Auth Error:', error);
+    // Handle error scenarios, such as displaying error messages to the user
+  };
+
+
+
   useGoogleOneTapLogin({
     onSuccess: credentialResponse => {
       console.log(credentialResponse)
       const decode = jwtDecode(credentialResponse.credential);
-      console.log(decode);
     },
     onError: () => {
       console.log('Login Failed');
@@ -87,16 +112,25 @@ const Login = () => {
                             
                             </div>
                            <div className='d-flex justify-content-center'>
-                           <GoogleLogin
+                           {/* <GoogleLogin
                                 onSuccess={credentialResponse => { 
                                   console.log(credentialResponse)
                                   const decode = jwtDecode(credentialResponse.credential);
-                                           console.log(decode);
+                                    console.log(decode);
+                                    const res = axios.post(`https://myfuseback.vercel.app/api/auth/loginWithGoogle` ,{decode}) ; 
                                 }}
                                 onError={() => {
                                   console.log('Login Failed');
                                 }}
-                              />
+                              /> */}
+
+                                <GoogleLogin
+                                        clientId="357146799127-ffdktnts01tqbj4johpc2pqr98mn27tb.apps.googleusercontent.com"
+                                        buttonText="Login with Google"
+                                        onSuccess={responseGoogleSuccess}
+                                        onFailure={responseGoogleFailure}
+                                        cookiePolicy={'single_host_origin'}
+                                      />
                               </div>
                               <br/>
                            <p className='text-center'>or</p>
