@@ -79,15 +79,15 @@ const Login = () => {
 
       if(response.data.success)
     {
-            toast.success(res.data.message);
+            toast.success(response.data.message);
            
             setAuth({
               ...auth , 
-              user:res.data.user,
-              token:res.data.token
+              user:response.data.user,
+              token:response.data.token
             }); 
              
-            localStorage.setItem('auth',JSON.stringify(res.data))
+            localStorage.setItem('auth',JSON.stringify(response.data))
             Navigate( '/welcome');
            
 
