@@ -68,7 +68,7 @@ const Login = () => {
       console.log('Google Auth Response:', credentialResponse);
 
       // Decode the JWT token
-      const decode = jwtDecode(credentialResponse.tokenId);
+      const decode =  await jwtDecode(credentialResponse.credential);
       console.log('Decoded Token:', decode);
 
       // Make a POST request to your backend API
