@@ -72,7 +72,7 @@ const Login = () => {
       console.log('Decoded Token:', decode);
 
       // Make a POST request to your backend API
-      const response = await axios.post('https://myfuseback.vercel.app/api/auth/loginWithGoogle', { decode });
+      const response = await axios.post('http://10.14.104.165:8085/api/auth/loginWithGoogle', { decode });
 
       console.log('Backend Response:', response.data);
       // Handle further actions after successful login, such as updating UI, storing tokens, etc.
