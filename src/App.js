@@ -24,7 +24,7 @@ function App() {
     const fetchData = async () => {
       try {
         // Make a GET request to the PHP script
-        const response = await axios.get('https://your-php-script-url');
+        const response = await axios.get('https://myfuse.in/dashboard/api.php');
 
         // Destructure response data
         const { name, isauth } = response.data;
