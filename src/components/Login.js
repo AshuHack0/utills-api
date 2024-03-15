@@ -65,16 +65,16 @@ const Login = () => {
 
   const responseGoogleSuccess = async (credentialResponse) => {
     try {
-      console.log('Google Auth Response:', credentialResponse);
+      // console.log('Google Auth Response:', credentialResponse);
 
       // Decode the JWT token
       const decode =  await jwtDecode(credentialResponse.credential);
-      console.log('Decoded Token:', decode);
+      // console.log('Decoded Token:', decode);
 
       // Make a POST request to your backend API
       const response = await axios.post('https://myfuseback.vercel.app/api/auth/loginWithGoogle', { decode });
 
-      console.log('Backend Response:', response.data);
+      // console.log('Backend Response:', response.data);
       // Handle further actions after successful login, such as updating UI, storing tokens, etc.
 
       if(response.data.success)
@@ -106,16 +106,27 @@ const Login = () => {
 
 
 
+  // useGoogleOneTapLogin({
+  //   // onSuccess: credentialResponse => {
+  //   //   console.log(credentialResponse)
+  //   //   const decode = jwtDecode(credentialResponse.credential);
+  //   // },
+  //   onSuccess:{responseGoogleSuccess},
+  //   onFailure:{responseGoogleFailure},
+  //   onError: () => {
+  //     console.log('Login Failed');
+  //   },
+  // });
+
   useGoogleOneTapLogin({
-    onSuccess: credentialResponse => {
-      console.log(credentialResponse)
-      const decode = jwtDecode(credentialResponse.credential);
-    },
+    onSuccess: responseGoogleSuccess,
+    onFailure: responseGoogleFailure,
     onError: () => {
       console.log('Login Failed');
     },
   });
 
+  
 
   return (
     <div className={`container-fluid  ${styles.main}`} >

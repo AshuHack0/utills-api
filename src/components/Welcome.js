@@ -38,6 +38,55 @@ const Welcome = () => {
   //   },
   // });
 
+  const responseGoogleSuccess = async (credentialResponse) => {
+    try {
+      // console.log('Google Auth Response:', credentialResponse);
+
+      // Decode the JWT token
+      const decode =  await jwtDecode(credentialResponse.credential);
+      // console.log('Decoded Token:', decode);
+
+      // Make a POST request to your backend API
+      const response = await axios.post('https://myfuseback.vercel.app/api/auth/loginWithGoogle', { decode });
+
+      // console.log('Backend Response:', response.data);
+      // Handle further actions after successful login, such as updating UI, storing tokens, etc.
+
+      if(response.data.success)
+    {
+            toast.success(response.data.message);
+           
+            setAuth({
+              ...auth , 
+              user:response.data.user,
+              token:response.data.token
+            }); 
+             
+            localStorage.setItem('auth',JSON.stringify(response.data))
+            Navigate( '/welcome');
+           
+
+    }
+
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error scenarios, such as displaying error messages to the user
+    }
+  };
+
+  const responseGoogleFailure = (error) => {
+    console.error('Google Auth Error:', error);
+    // Handle error scenarios, such as displaying error messages to the user
+  };
+
+  useGoogleOneTapLogin({
+    onSuccess: responseGoogleSuccess,
+    onFailure: responseGoogleFailure,
+    onError: () => {
+      console.log('Login Failed');
+    },
+  });
+
   return (
     <div>
       <MyResponsiveNavbar />
