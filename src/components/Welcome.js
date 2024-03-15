@@ -8,17 +8,23 @@ import template2 from "./ResumeBuilder/assets/images/ashu2.png";
 import template3 from "./ResumeBuilder/assets/images/IITN.png";
 import template4 from "./ResumeBuilder/assets/images/IIT.png";
 import template5 from "./ResumeBuilder/assets/images/IITA.png"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import PrevImage from "./ResumeBuilder/assets/images/preview.png";
 import Accordion from "react-bootstrap/Accordion";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { useGoogleOneTapLogin } from '@react-oauth/google';
+import {jwtDecode} from 'jwt-decode'
+import {toast} from 'react-hot-toast'
+import { useAuth } from './ResumeBuilder/builder/components/context/auth';
+
 // import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
 import "aos/dist/aos.css";   
 import doubleQuote from './assets/double.png'
 import HiringWithUs from "./components/HiringWithUs";
 import RecentScroll from "./components/RecentScroll";
+import axios from "axios";
 // ..
 AOS.init();
 function handleClick() {
@@ -27,6 +33,9 @@ function handleClick() {
 
 const Welcome = () => {
 
+  const Navigate = useNavigate(); 
+  //  const location = useLocation();
+    const {auth , setAuth} = useAuth();
    
   // useGoogleOneTapLogin({
   //   onSuccess: (credentialResponse) => {
