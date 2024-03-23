@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 .container {
   max-width: 1324px;
   margin: 0 auto;
-min-height: 83dvh;
+  min-height: 83dvh;
   padding: 20px;
- 
+  font-family: "Rubik";
 }
 
 .heading {
@@ -28,7 +29,7 @@ min-height: 83dvh;
 .templatesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 4rem;
 }
 
@@ -40,6 +41,8 @@ min-height: 83dvh;
   border-radius: 6px;
   cursor: pointer;
   position: relative;
+  background-color: #e7ecf5;
+  padding: 1rem;
 }
 
 .template .preview {
@@ -76,4 +79,11 @@ min-height: 83dvh;
 
 .activeOnHover:hover {
   color:rgb(231, 108, 108)
+}
+.show {
+  display: none !important;
+}
+
+.template:hover  .show { 
+  display: flex !important;
 }

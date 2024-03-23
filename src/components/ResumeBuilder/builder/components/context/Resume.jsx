@@ -123,7 +123,7 @@ const mergeDataIntoConfig = (data) => {
 const ResumeProvider = ({ children }) => {
   const templates = {
     iitism: {
-      name: "Template 1",
+      name: "Double Column",
       key: "iitism",
       build: ISMResumeBuild,
       resume: ISMResume,
@@ -131,7 +131,7 @@ const ResumeProvider = ({ children }) => {
       preview: ISMPreviewImage,
     },
     iitb: {
-      name: "Template 2",
+      name: "Elegant",
       key: "iitb",
       build: IITBResumeBuild,
       resume: IITBResume,
@@ -139,7 +139,7 @@ const ResumeProvider = ({ children }) => {
       preview: IITBPreviewImage,
     },
     iitd: {
-      name: "Template 3",
+      name: "Polished",
       key: "iitd",
       build: IITDResumeBuild,
       resume: IITDResume,
@@ -147,7 +147,7 @@ const ResumeProvider = ({ children }) => {
       preview: IITDPreviewImage,
     },
     iita: {
-      name: "Template 4",
+      name: "Modern",
       key: "iita",
       build: IITAResumeBuild,
       resume: IITAResume,
@@ -155,7 +155,7 @@ const ResumeProvider = ({ children }) => {
       preview: IITAPreviewImage,
     },
     iitn: {
-      name: "Template 5",
+      name: "Stylish",
       key: "iitn",
       build: IITNResumeBuild,
       resume: IITNResume,
@@ -163,7 +163,7 @@ const ResumeProvider = ({ children }) => {
       preview: IITNPreviewImage,
     },
     iitk: {
-      name: "Template 6",
+      name: "Timeline",
       key: "iitk",
       build: IITKResumeBuild,
       resume: IITKResume,
