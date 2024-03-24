@@ -19,6 +19,7 @@ import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
 import arrow from './assets/arrow.webp';
 import arrow2 from './assets/arrow2.webp';
+import wave from './assets/wave.webp';
 // import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
 import "aos/dist/aos.css";   
@@ -523,6 +524,41 @@ const Welcome = () => {
           </div>
         </div>
       </div>
+      
+      <div className={`container`} style={{ backgroundColor: '#f5f7fc', position: 'relative' ,padding:'2rem', marginTop:'3rem' }}>
+  <img src={wave} style={{ position: 'absolute', bottom: 0, right: 0, maxWidth: '80%', maxHeight: '70%'  }} />
+  <div className="row" style={{ display: "flex", justifyContent: "space-around" }}>
+    <div className={`col-md-5  d-flex justify-content-center align-items-center flex-direction-column`} >
+      <span>
+        <h1 className={`text-center ${styles.heading}`} style={{ fontWeight: 600, fontSize: '2rem', lineHeight: '2.6rem', marginBottom: '3rem', textTransform: 'capitalize', }}>Resumes optimized for  <span style={{ color: "rgba(107,87,255)" }}> applicant tracking systems </span> (ATS)</h1>
+        <p >Enhancv resumes and cover letters are vigorously tested against major ATS systems to ensure complete parsability</p>
+        <div className="col-md-10 d-flex justify-content-center">
+          <NavLink to="/welcome">
+            <button
+              className="btn "
+              style={{
+                backgroundColor: "#ffb30b",
+                fontWeight: "700",
+                padding: ".6rem",
+               
+              }}
+            >
+              Build an ATS-Friendly Resume
+            </button>
+          </NavLink>
+        </div>
+      </span>
+    </div>
+    <div className="col-md-5">
+      <div className={`container ${styles.leftbox}`}>
+        <div className={`row ${styles.leftboxinner}`} data-aos="fade-right">
+          <img className="mt-4" src="https://s40198.pcdn.co/au/wp-content/uploads/sites/3/2022/10/ATS-Flywheel_2_V2-1440x1440.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div className={`container   ${styles.backgroundBacktest}`}>
         <h1  className={` text-center ${styles.heading}`} style={{fontWeight:600 ,fontSize: '2rem' ,
