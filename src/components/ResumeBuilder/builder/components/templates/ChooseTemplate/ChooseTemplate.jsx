@@ -33,7 +33,7 @@ You can always change it later.</h2>
               <div className={styles.preview}>
                 <img src={template.preview} alt={template.name} />
                 <div className={styles.show}  style={{display:'flex' , justifyContent:'center'}}>
-                 <span href="" className="text-center" style={{ position:'absolute', width:'80%', bottom:80, backgroundColor:'hsl(207, 88%, 52%)', color:'white' , padding:'.5rem' , borderRadius:'10px'}}>Use Template</span>
+                 <span href="" className={`text-center ${styles.but}`} style={{ position:'absolute', width:'80%', bottom:80, backgroundColor:'hsl(207, 88%, 52%)', color:'white' , padding:'.5rem' , borderRadius:'10px'}}>Use Template</span>
               </div>
               </div> 
               

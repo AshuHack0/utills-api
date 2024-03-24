@@ -17,7 +17,8 @@ import { useGoogleOneTapLogin } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode'
 import {toast} from 'react-hot-toast'
 import { useAuth } from './ResumeBuilder/builder/components/context/auth';
-
+import arrow from './assets/arrow.webp';
+import arrow2 from './assets/arrow2.webp';
 // import { useGoogleOneTapLogin } from "@react-oauth/google";
 import AOS from "aos";
 import "aos/dist/aos.css";   
@@ -26,6 +27,11 @@ import HiringWithUs from "./components/HiringWithUs";
 import RecentScroll from "./components/RecentScroll";
 import axios from "axios";
 // ..
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+
+
 AOS.init();
 function handleClick() {
   localStorage.removeItem("template");
@@ -129,8 +135,21 @@ const Welcome = () => {
                     user-friendly interface, creating a standout resume has
                     never been easier or quicker.
                   </p>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph} style={{color:'white'}}>ATS-friendly professionally designed resumes</span> 
+                  </span> <br/>
+                  {/* <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph} style={{color:'white'}}>10+ job-specific resume and cover letter guides</span> 
+                  </span> <br/> */}
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph} style={{color:'white'}}>Two-column, single-column,
+                      and multi-page layouts</span> 
+                  </span> <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph} style={{color:'white'}}>Select a template, enter your job title and let AI do the rest</span> 
+                  </span>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10" style={{  marginTop:'2rem'}}>
                   <NavLink to="/welcome">
                     <button
                       className="btn   me-4 mb-3"
@@ -139,6 +158,8 @@ const Welcome = () => {
                         padding: ".6rem",
                         // color: "white",
                         fontWeight: 700,
+                        // color:'blue'
+                      
                       }}
                     >
                       {" "}
@@ -150,9 +171,10 @@ const Welcome = () => {
                     <button
                       className="btn mb-3 "
                       style={{
-                        backgroundColor: "rgb(255, 179, 11)",
-                        border: "2px solid rgb(35, 45, 63) ",
+                        // backgroundColor: "rgb(255, 179, 11)",
+                        border: "2px solid rgb(255, 179, 11) ",
                         padding: ".6rem",
+                        color:"white",
                         fontWeight: 700,
                       }}
                     >
@@ -263,6 +285,7 @@ const Welcome = () => {
                 Go To MyFuse.In
               </button>
             </NavLink>
+            
           </div>
         </div>
       </div>
@@ -314,6 +337,19 @@ const Welcome = () => {
                     fast-tracking your path to securing your ideal position.{" "}
                   </p>
                 </div>
+                <div className={`col-md-10 `}>
+                <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Crafted with the finesse of GPT's prowess</span> 
+                  </span>  <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Generated in seconds</span> 
+                  </span>   <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Creates text with human-like fluidity and authenticity.
+                 </span> 
+                  </span>   <br/>
+                  
+                  </div>
                 <div className="col-md-10">
                   <NavLink to="/">
                     <button
@@ -322,19 +358,28 @@ const Welcome = () => {
                         backgroundColor: "#ffb30b",
                         fontWeight: "700",
                         padding: ".7rem",
+                        marginTop:'1rem'
                       }}
                     >
                       {" "}
                       Craft My Resume
+                     
+                      {/* hk */}
                     </button>
                   </NavLink>
+                
+                  
                 </div>
+                
+               
               </div>
+              
             </div>
+            <img className={styles.arrow} src={arrow2} style={{height:'11rem' , marginTop:"1rem"}}/>
           </div>
         </div>
       </div>
-
+   
       <div className={`container-fluid    mb-4`} style={{ marginTop: "4rem" }}>
         <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-md-5">
@@ -358,6 +403,19 @@ const Welcome = () => {
                     combinations. Stand out and land your dream job faster.
                   </p>
                 </div>
+                <div className={`col-md-10 `}>
+                <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Personalize with your information.</span> 
+                  </span>  <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >AI-driven resume creation.</span> 
+                  </span>   <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Effortless and effective resume building.
+                 </span> 
+                  </span>   <br/>
+                  
+                  </div>
                 <div className="col-md-10">
                   <NavLink to="/welcome">
                     <button
@@ -366,15 +424,18 @@ const Welcome = () => {
                         backgroundColor: "#ffb30b",
                         fontWeight: "700",
                         padding: ".6rem",
+                        marginTop:'1rem'
                       }}
                     >
                       {" "}
                       Craft My Resume
                     </button>
-                  </NavLink>
+                  </NavLink> 
+                 
                 </div>
               </div>
             </div>
+            <img  className={styles.arrow} src={arrow} style={{height:'11rem'}}/>
           </div>
           <div
             className={`col-md-7  ${styles.middleTOP} `}
@@ -393,7 +454,7 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-
+     
       <div className={`container-fluid   `} style={{ marginTop: "5rem" }}>
         <div className="row ">
           <div
@@ -425,24 +486,29 @@ const Welcome = () => {
                     Examples
                   </h1>
                   <p className={styles.paragraph}>
-                    Explore our collection of real resume examples to gain
-                    inspiration and insight into effective resume writing. Our
-                    curated selection covers various industries, job positions,
-                    and levels of experience, providing you with valuable ideas
-                    and strategies to craft your own standout resume. Whether
-                    you're just starting your career or seeking to advance to
-                    the next level, these real-life examples can help you tailor
-                    your resume to showcase your skills, accomplishments, and
-                    qualifications effectively.
+                  Explore our diverse collection of real resume examples for inspiration and insight. From various industries and roles, find valuable guidance to craft your standout resume effectively. Tailor your resume to showcase your skills and achievements confidently, whether you're starting your career or aiming for advancement
                   </p>
                 </div>
+                <div className={`col-md-10 `}>
+                <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Real-world examples for inspiration.</span> 
+                  </span>  <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Tailor your resume confidently.</span> 
+                  </span>   <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Craft standout resumes effectively.
+                 </span> 
+                  </span>   <br/>
+                  
+                  </div>
                 <div className="col-md-10">
                   <NavLink to="/">
                     <button
                       className="btn   me-4"
                       style={{
                         backgroundColor: "#ffb30b",
-
+                        marginTop:'1rem',
                         padding: ".7rem",
                         fontWeight: "700",
                       }}
@@ -583,6 +649,23 @@ const Welcome = () => {
                     and elevate your career
                   </p>
                 </div>
+                <div className={`col-md-10 `}>
+                <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >MyFuse.In: Your ultimate placement portal.</span> 
+                  </span>  <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Connect with opportunities and share experiences.</span> 
+                  </span>   <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Thrive in your career journey with us.
+                 </span> 
+                  </span>   <br/>
+                  <span style={{color:'white'}}>
+                  <FontAwesomeIcon icon={faCircleCheck} style={{ color: '#2dc08d' }} /> <span className={styles.paragraph}  >Elevate your career - join now!
+                 </span> 
+                  </span>   <br/>
+                  
+                  </div>
                 <div className="col-md-10">
                   <NavLink to="/welcome">
                     <button
@@ -592,6 +675,7 @@ const Welcome = () => {
                         padding: ".6rem",
                         color: "rgb(35, 45, 63)",
                         fontWeight: 600,
+                        marginTop:'1rem'
                       }}
                     >
                       {" "}
@@ -599,6 +683,7 @@ const Welcome = () => {
                     </button>
                   </NavLink>
                 </div>
+                
               </div>
             </div>
           </div>

@@ -58,6 +58,9 @@
     .paragraph {   
         font-size: .8rem !important;
     }
+    .arrow{
+        display: none !important;
+    }
   }
 
 /* for laptop view */

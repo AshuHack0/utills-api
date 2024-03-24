@@ -87,3 +87,10 @@
 .template:hover  .show { 
   display: flex !important;
 }
+.but:hover {
+  background-color: hsl(207, 74%, 37%) !important;
+}
+
+.template:hover {
+ background-color:hsla(207, 56%, 77%, 0.333) !important;;
+}
