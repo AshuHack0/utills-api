@@ -1,6 +1,6 @@
 .laptop {
     display: flex !important;
-    justify-content: center !important;
+    /* justify-content: center !important; */
      
     width: 100%;
 }

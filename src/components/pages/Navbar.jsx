@@ -20,9 +20,16 @@ function MyResponsiveNavbar() {
     navigate('/'); // Navigate to the home page after logout
 
   }
+ 
+  const handleJobApplicationClick = () => {
+    navigate('/welcome/jobapplication'); // Navigate to the '/welcome/jobapplication' URL
+  };
 
 
   return (
+
+    
+
     <Navbar   expand="lg" variant="light">
       <Container>
         <Navbar.Brand href="https://myfuse.in/home" >
@@ -37,20 +44,21 @@ function MyResponsiveNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav  className={`me-auto ${styles.laptop}` } >
              
-             <Nav.Link href=""  >
-             Product
+             <Nav.Link onClick={handleJobApplicationClick}  >
+             Documents
             </Nav.Link>
             <Nav.Link href=" "  >
-             Find A Job
+             Find Jobs
             </Nav.Link>
             <Nav.Link href=" " >
-             Search A  Job
+            Job Applications
             </Nav.Link>
             <Nav.Link href=" " >
-             Price
+            Resume Examples
             </Nav.Link>
             <Nav.Link href=" " >
-            Support
+     
+             Help
             </Nav.Link>
           </Nav>
           
@@ -59,7 +67,29 @@ function MyResponsiveNavbar() {
             {
 
              !auth.user ? (
+              <>
             <NavLink to="/login">
+          <div style={{
+        height: '34px',
+        
+        border: '1px solid rgb(255, 179, 11)',
+        borderRadius: '70px',
+        justifyContent: 'center',
+        color: 'black',
+        fontWeight: 700,
+        fontSize: '12px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        cursor: 'pointer',
+        transition: '0.3s',
+        padding: '0 15px',
+        marginLeft: '15px',
+        width:'8rem'
+}}>
+    Get Started  
+</div>
+</NavLink>
+<NavLink to="/login">
           <div style={{
         height: '34px',
         background: 'rgb(255, 179, 11)',
@@ -74,14 +104,13 @@ function MyResponsiveNavbar() {
         cursor: 'pointer',
         transition: '0.3s',
         padding: '0 15px',
-        marginLeft: '15px'
+        marginLeft: '15px',
+        width:'8rem'
 }}>
     Login <img src="https://cdn.unstop.com/uploads/images/unstop/menu_icons/login_icon.svg" alt="" style={{      width:'1rem' , marginLeft:'.5rem'}}/>
 </div>
-
-
-
 </NavLink>
+</>
              ) : (  
 
                <NavDropdown title={<span style={{ color: 'black' }}> {auth?.user[0]?.firstname}</span>} id="basic-nav-dropdown">

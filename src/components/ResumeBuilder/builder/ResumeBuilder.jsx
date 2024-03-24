@@ -48,7 +48,10 @@ const ResumeBuilder = () => {
           </div>
         </div>
       ) : (
-        <ChooseTemplate />
+        
+          <ChooseTemplate />
+    
+       
       )}
         <Footer/>
          <AiAll/>

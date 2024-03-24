@@ -11,7 +11,10 @@ import Verify from "./components/pages/Verify_otp";
 import { faHiking } from "@fortawesome/free-solid-svg-icons";
 import PdfToJsonConverter from "./components/pages/Pdf";
 import axios from "axios";
-
+import Application from "./components/pages/Application";
+import Dashboard from "./components/pages/Dashboard";
+import NotFound from "./components/pages/NotFound";
+ 
 function App() {
   const [name, setName] = useState('Unknown User');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -37,7 +40,7 @@ function App() {
       }
     };
 
-    console.log(name);
+    // console.log(name);
     // Call fetchData function
     fetchData();
   }, []); // Empty dependency array to ensure useEffect runs only once
@@ -47,6 +50,8 @@ function App() {
       <Routes>
       <Route path="/welcome" element={<PrivateRoute />} >
         <Route path="" element={<Resume />} />
+        <Route path="jobapplication" element={<Application />} />
+        <Route path="welcome/dashboard" element={<Dashboard />} />
       </Route>
       <Route path="/" element={<Welcome />} />
       <Route path="/login" element={<Login />} />
@@ -54,6 +59,7 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/verify/:email" element={<Verify />} />
       <Route path="/pdf" element={<PdfToJsonConverter />} />
+      <Route path="*"   component={<NotFound/>} />
     </Routes>
  
   );

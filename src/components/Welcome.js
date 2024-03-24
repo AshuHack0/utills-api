@@ -95,17 +95,18 @@ const Welcome = () => {
     // Handle error scenarios, such as displaying error messages to the user
   };
 
-  useGoogleOneTapLogin({
-    onSuccess: responseGoogleSuccess,
-    onFailure: responseGoogleFailure,
-    onError: () => {
-      console.log('Login Failed');
-    },
-  });
+  // useGoogleOneTapLogin({
+  //   onSuccess: responseGoogleSuccess,
+  //   onFailure: responseGoogleFailure,
+  //   onError: () => {
+  //     console.log('Login Failed');
+  //   },
+  // });
 
   return (
-    <div>
+    <div >
       <MyResponsiveNavbar />
+     <span style={{borderBottom:'2px solid red' , width:'100vw'}}></span>
       <div className={`container-fluid  ${styles.background}`}>
         <div className="row  " style={{ display: "flex" }}>
           <div

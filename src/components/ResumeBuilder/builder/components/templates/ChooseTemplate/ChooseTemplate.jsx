@@ -8,19 +8,17 @@ const ChooseTemplate = () => {
 
  
   return (
-    <div className={styles.container}>
-      {/* <div className={styles.heading}>Create your professional resume effortlessly with integrated AI!</div> */}
-      {/* <div className="text-center d-flex justify-content-center">
-                  <NavLink to="/welcome" className={`p-4 ${styles.active}`}>
-                       Resume
-                  </NavLink>
-                  <NavLink to="/welcome" className="p-4">
-                       Cover Letter
-                  </NavLink>
-        </div> */}
+    <div className={`${styles.container} container-fluid`} style={{backgroundColor:'#fafbfd' ,  width: '100vw !important',}} >
+      <div className="row d-flex justify-content-center">
+          <div className="col-10 col-md-5 d-flex justify-content-center align-items-center" style={{ position:'relative'}}>
+            <img src="https://app.enhancv.com/a56f83079b3ce6b6c970ea6c0d4eaa1c.svg"  style={{    top: "28px", width: "72px",left: "-5px"}}/>
+            <img src="https://app.enhancv.com/896efd8721fd8bf15eacfe5d5bfa992f.svg"   style={{    top: "28px", width: "72px",left: "-5px"}}/>
+            <img src="https://app.enhancv.com/8ded6a2e48505191ce353b14ba8baad0.svg" style={{    top: "28px", width: "72px",left: "-5px"}}/>
+          </div>
+      </div>
        <div>
         <h2 className="text-center">Please select a template for your resume.</h2> <h2 className="text-center">
-You can always change it later.</h2>
+         You can always change it later.</h2>
        </div>
       <div className={styles.templatesGrid}>
         {Object.values(templates).map((template, index) => {
