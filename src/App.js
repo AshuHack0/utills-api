@@ -14,6 +14,7 @@ import axios from "axios";
 import Application from "./components/pages/Application";
 import Dashboard from "./components/pages/Dashboard";
 import NotFound from "./components/pages/NotFound";
+import Jobs from "./components/pages/Jobs";
  
 function App() {
   const [name, setName] = useState('Unknown User');
@@ -51,7 +52,7 @@ function App() {
       <Route path="/welcome" element={<PrivateRoute />} >
         <Route path="" element={<Resume />} />
         <Route path="jobapplication" element={<Application />} />
-        <Route path="welcome/dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
       <Route path="/" element={<Welcome />} />
       <Route path="/login" element={<Login />} />
@@ -59,6 +60,7 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/verify/:email" element={<Verify />} />
       <Route path="/pdf" element={<PdfToJsonConverter />} />
+      <Route path="/jobs" element={<Jobs />} />
       <Route path="*"   component={<NotFound/>} />
     </Routes>
  

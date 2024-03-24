@@ -25,6 +25,16 @@ function MyResponsiveNavbar() {
     navigate('/welcome/jobapplication'); // Navigate to the '/welcome/jobapplication' URL
   };
 
+  const handleJobClick = () => {
+    navigate('/jobs'); // Navigate to the '/welcome/jobapplication' URL
+  };
+  const handleResumeClick = () => {
+    navigate('/welcome'); // Navigate to the '/welcome/jobapplication' URL
+  };
+
+  const handleDashboardClick = () => {
+    navigate('/welcome/dashboard'); // Navigate to the '/welcome/jobapplication' URL
+  };
 
   return (
 
@@ -43,21 +53,26 @@ function MyResponsiveNavbar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav  className={`me-auto ${styles.laptop}` } >
-             
-             <Nav.Link onClick={handleJobApplicationClick}  >
-             Documents
-            </Nav.Link>
-            <Nav.Link href=" "  >
+          {
+
+           auth.user ? (
+            <Nav.Link   onClick={handleDashboardClick} >
+            Dashboard
+           </Nav.Link>
+            ) : ( null) 
+           
+           }
+            
+            <Nav.Link onClick={handleJobClick}  >
              Find Jobs
             </Nav.Link>
-            <Nav.Link href=" " >
+            <Nav.Link  onClick={handleJobApplicationClick}  >
             Job Applications
             </Nav.Link>
-            <Nav.Link href=" " >
+            <Nav.Link  onClick={handleResumeClick} >
             Resume Examples
             </Nav.Link>
-            <Nav.Link href=" " >
-     
+            <Nav.Link onClick={handleResumeClick} >
              Help
             </Nav.Link>
           </Nav>
@@ -113,7 +128,11 @@ function MyResponsiveNavbar() {
 </>
              ) : (  
 
+              //  <NavDropdown title={<span style={{ color: 'black' }}> {auth?.user[0]?.firstname}</span>} id="basic-nav-dropdown">
                <NavDropdown title={<span style={{ color: 'black' }}> {auth?.user[0]?.firstname}</span>} id="basic-nav-dropdown">
+               <NavDropdown.Item onClick={handleLogout}>Plans</NavDropdown.Item>
+               <NavDropdown.Item onClick={handleLogout}>Account</NavDropdown.Item>
+               <NavDropdown.Item onClick={handleLogout}>Language</NavDropdown.Item>
                <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
               </NavDropdown> 
             
